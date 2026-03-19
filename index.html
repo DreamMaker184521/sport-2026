@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TOMY×11W">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%230a0a0a'/%3E%3Crect x='40' y='40' width='432' height='432' rx='80' fill='%23161920'/%3E%3Ctext x='256' y='210' font-family='Arial Black' font-weight='900' font-size='130' fill='%23f97316' text-anchor='middle'%3ET%3C/text%3E%3Ctext x='256' y='340' font-family='Arial' font-size='80' fill='%23f97316' text-anchor='middle'%3E%C3%9711W%3C/text%3E%3Ctext x='256' y='430' font-family='Arial' font-size='44' fill='%236b7280' text-anchor='middle'%3E87%E2%86%9280kg%3C/text%3E%3C/svg%3E">
+<title>TOMY×11W — 87→80kg</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>
+if ('serviceWorker' in navigator) {
+  const swCode = `
+    const CACHE='tomy11w-v1';
+    self.addEventListener('install',e=>{self.skipWaiting();});
+    self.addEventListener('activate',e=>{e.waitUntil(self.clients.claim());});
+    self.addEventListener('fetch',e=>{
+      e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)));
+    });
+  `;
+  const blob = new Blob([swCode],{type:'text/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
+}
+</script>
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111318;
+    --card: #16191f;
+    --border: #242830;
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --accent: #f97316;
+    --accent2: #3b82f6;
+    --accent3: #10b981;
+    --accent4: #a855f7;
+    --red: #ef4444;
+    --yellow: #eab308;
+    --phase1: #3b82f6;
+    --phase2: #f97316;
+    --phase3: #ef4444;
+    --phase4: #10b981;
+    --phase5: #a855f7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0;
+    padding: 0 24px;
+    height: 52px;
+  }
+  nav .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-right: 32px;
+  }
+  nav button {
+    background: none; border: none; cursor: pointer;
+    color: var(--muted); font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 500;
+    padding: 0 20px; height: 52px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  nav button.active { color: var(--text); border-bottom-color: var(--accent); }
+  nav button:hover { color: var(--text); }
+
+  /* PAGES */
+  .page { display: none; padding: 32px 24px 64px; max-width: 1200px; margin: 0 auto; }
+  .page.active { display: block; }
+
+  /* TYPOGRAPHY */
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 3px; line-height: 1; }
+  h2 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--accent); margin-bottom: 16px; }
+  h3 { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; margin-bottom: 10px; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0f1117 0%, #1a1f2e 50%, #0f1117 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+  .hero-stats { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+  .stat-pill {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 16px;
+  }
+  .stat-pill .val { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--accent); }
+  .stat-pill .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .countdown {
+    text-align: right;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 20px;
+  }
+  .countdown .big { font-family: 'Bebas Neue', sans-serif; font-size: 56px; color: var(--accent); line-height: 1; }
+  .countdown .sub { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* PHASE LEGEND */
+  .phase-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+  .phase-tag {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px; padding: 6px 14px;
+    font-size: 12px; font-weight: 500;
+  }
+  .phase-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* GRID LAYOUTS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+
+  /* CARD */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .card-accent-left { border-left: 3px solid var(--accent); }
+  .card-accent-blue { border-left: 3px solid var(--accent2); }
+  .card-accent-green { border-left: 3px solid var(--accent3); }
+  .card-accent-purple { border-left: 3px solid var(--accent4); }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead tr { border-bottom: 2px solid var(--border); }
+  thead th {
+    padding: 10px 12px; text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--muted);
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  tbody td { padding: 9px 12px; vertical-align: middle; }
+  .td-exercise { font-weight: 600; color: var(--text); }
+  .td-muscle { font-size: 11px; color: var(--muted); }
+  .td-phase { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .tag {
+    display: inline-block;
+    background: rgba(249,115,22,0.12); color: var(--accent);
+    border: 1px solid rgba(249,115,22,0.25);
+    border-radius: 4px; padding: 2px 7px;
+    font-size: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .tag-blue { background: rgba(59,130,246,0.12); color: var(--accent2); border-color: rgba(59,130,246,0.25); }
+  .tag-green { background: rgba(16,185,129,0.12); color: var(--accent3); border-color: rgba(16,185,129,0.25); }
+  .tag-purple { background: rgba(168,85,247,0.12); color: var(--accent4); border-color: rgba(168,85,247,0.25); }
+  .tag-red { background: rgba(239,68,68,0.12); color: var(--red); border-color: rgba(239,68,68,0.25); }
+
+  /* WEEK TYPE */
+  .week-type-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 28px; }
+  .day-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 8px; text-align: center;
+  }
+  .day-card .day-name { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+  .day-card .day-type { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+  .day-card .day-detail { font-size: 10px; color: var(--muted); line-height: 1.4; }
+  .day-off { opacity: 0.5; }
+
+  /* SESSION SIDE BY SIDE */
+  .session-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .session-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; overflow: hidden;
+  }
+  .session-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .session-icon { font-size: 18px; }
+  .session-title { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 1px; }
+  .session-dur { font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+  .session-body { padding: 12px 16px; }
+  .session-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 12px;
+  }
+  .session-row:last-child { border-bottom: none; }
+  .session-row .ex { color: var(--text); font-weight: 500; }
+  .session-row .sets { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 11px; }
+  .session-phase-bar {
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--red));
+  }
+
+  /* PAGE 2 — WEEKS */
+  .weeks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .week-card {
+    border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--card);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .week-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .week-header {
+    padding: 12px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .week-num { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; }
+  .week-dates { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.6); }
+  .week-poids { font-family: 'Bebas Neue', sans-serif; font-size: 18px; }
+  .week-body { padding: 12px 16px 14px; }
+  .week-section-label {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--muted); font-family: 'JetBrains Mono', monospace;
+    font-weight: 700; margin: 8px 0 4px;
+  }
+  .week-section-label:first-child { margin-top: 0; }
+  .week-line { font-size: 12px; color: var(--text); margin-bottom: 2px; display: flex; gap: 6px; align-items: baseline; }
+  .week-line::before { content: '›'; color: var(--muted); flex-shrink: 0; }
+  .week-note {
+    margin-top: 10px; padding: 8px 10px;
+    background: rgba(0,0,0,0.3); border-radius: 6px;
+    font-size: 11px; color: var(--muted); line-height: 1.5;
+    border-left: 2px solid;
+  }
+
+  /* PAGE 3 */
+  .nutrition-timeline {
+    display: grid; grid-template-columns: auto 1fr; gap: 0 20px;
+    margin-bottom: 28px;
+  }
+  .nt-time {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--accent); font-weight: 700;
+    padding: 14px 0; text-align: right;
+    border-right: 2px solid var(--border);
+    padding-right: 16px; min-width: 60px;
+    position: relative;
+  }
+  .nt-time::after {
+    content: '';
+    position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--black);
+  }
+  .nt-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 16px; margin: 6px 0;
+  }
+  .nt-card-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .nt-card-detail { font-size: 12px; color: var(--muted); }
+  .nt-macros { display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+  .macro-badge {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    background: rgba(0,0,0,0.4); border-radius: 4px; padding: 2px 8px;
+    border: 1px solid var(--border);
+  }
+  .macro-p { color: #ef4444; }
+  .macro-g { color: #eab308; }
+  .macro-l { color: #3b82f6; }
+  .macro-k { color: var(--accent3); }
+
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .rule-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px;
+    display: flex; gap: 14px;
+  }
+  .rule-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 36px;
+    color: var(--border); flex-shrink: 0; line-height: 1;
+    min-width: 30px;
+  }
+  .rule-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .rule-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  .swim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+  .swim-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px;
+    border-top: 3px solid var(--accent2);
+  }
+  .swim-phase { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 1px; margin-bottom: 6px; }
+  .swim-weeks { font-size: 11px; color: var(--accent2); font-family: 'JetBrains Mono', monospace; margin-bottom: 10px; }
+  .swim-row { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .swim-row strong { color: var(--text); }
+
+  .recovery-table th { color: var(--muted); }
+  .check { color: var(--accent3); font-size: 16px; }
+  .cross { color: var(--red); font-size: 16px; }
+
+  /* SECTION HEADER */
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px; margin-top: 32px;
+  }
+  .section-header:first-child { margin-top: 0; }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: var(--border); margin: 28px 0; }
+
+  /* PROGRESS BAR */
+  .progress-bar { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-top: 6px; }
+  .progress-fill { height: 100%; border-radius: 3px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .two-col, .three-col, .session-grid, .weeks-grid, .swim-grid, .rules-grid { grid-template-columns: 1fr; }
+    .week-type-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* MOBILE / iPhone */
+  @media (max-width: 600px) {
+    nav { padding: 0 12px; overflow-x: auto; scrollbar-width: none; }
+    nav::-webkit-scrollbar { display: none; }
+    nav button { white-space: nowrap; font-size: 11px; padding: 0 12px; }
+    nav .logo { margin-right: 16px; font-size: 18px; }
+    .page { padding: 16px 12px 80px; }
+    h1 { font-size: 32px; }
+    .cal-day { min-height: 54px; padding: 6px 4px; }
+    .cal-day .cd-date { font-size: 16px; }
+    .cal-day .cd-type { font-size: 9px; }
+    .cal-week-label { font-size: 9px; padding-right: 6px; min-width: 60px; }
+    .cal-week { grid-template-columns: 62px repeat(7,1fr); gap: 3px; }
+    .cal-header { grid-template-columns: 62px repeat(7,1fr); gap: 3px; }
+    .hero { padding: 20px; }
+    .hero-stats { gap: 10px; }
+    .three-col, .session-grid, .swim-grid { grid-template-columns: 1fr; }
+    .two-col, .rules-grid { grid-template-columns: 1fr; }
+    .ex-row, .ex-header-row { grid-template-columns: 1fr; }
+    .ex-row > div { border-bottom: none; padding: 3px 16px; }
+    .ex-row > div:first-child { padding-top: 10px; font-weight: 700; }
+    .ex-row > div:last-child { padding-bottom: 10px; color: var(--muted); font-style: italic; }
+    #modal > div { margin: 10px; border-radius: 12px; }
+    body { -webkit-text-size-adjust: 100%; }
+    /* Safe area for iPhone notch */
+    nav { padding-top: env(safe-area-inset-top); height: calc(52px + env(safe-area-inset-top)); }
+    .page { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  }
+
+  .highlight-box {
+    background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.2);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 20px;
+    font-size: 13px; color: var(--text);
+  }
+  .highlight-box strong { color: var(--accent); }
+
+  .badge {
+    display: inline-flex; align-items: center;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px; padding: 4px 12px;
+    font-size: 11px; font-family: 'JetBrains Mono', monospace;
+    color: var(--muted); margin: 2px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">TOMY ×11W</div>
+  <button class="active" onclick="showPage(1,this)">01 — SYNTHÈSE</button>
+  <button onclick="showPage(2,this)">02 — SEMAINE PAR SEMAINE</button>
+  <button onclick="showPage(3,this)">03 — NUTRITION & RÈGLES</button>
+  <button onclick="showPage(4,this)">04 — SÉANCES DÉTAILLÉES</button>
+  <button onclick="showPage(5,this)">05 — JOURNAL</button>
+</nav>
+
+<!-- ═══════════════════════════════════════════════ PAGE 1 ═══════════ -->
+<div class="page active" id="page1">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1 style="color:var(--accent)">87 → 80 KG</h1>
+        <p style="color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:0.5px">16 MARS → 1ER JUIN 2026 &nbsp;·&nbsp; 11 SEMAINES &nbsp;·&nbsp; SÈCHE AGRESSIVE</p>
+        <div class="hero-stats">
+          <div class="stat-pill"><div class="val">−7 KG</div><div class="lbl">Objectif total</div></div>
+          <div class="stat-pill"><div class="val">−636g</div><div class="lbl">/ semaine</div></div>
+          <div class="stat-pill"><div class="val">~1 800</div><div class="lbl">kcal/jour</div></div>
+          <div class="stat-pill"><div class="val">5–6</div><div class="lbl">Séances/sem</div></div>
+          <div class="stat-pill"><div class="val">16/8</div><div class="lbl">Jeûne 12h–20h</div></div>
+        </div>
+      </div>
+      <div class="countdown">
+        <div class="big">77</div>
+        <div class="sub">jours restants</div>
+        <div style="margin-top:8px;font-size:12px;color:var(--muted)">1er juin 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASES -->
+  <div class="section-header"><h2>PHASES DU PROGRAMME</h2><div class="section-line"></div></div>
+  <div class="phase-legend">
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase1)"></div><span style="color:var(--phase1)">PHASE 1</span>&nbsp;Mise en place (S1–S2)</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase2)"></div><span style="color:var(--phase2)">PHASE 2</span>&nbsp;Montée en charge (S3–S5)</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase3)"></div><span style="color:var(--phase3)">PHASE 3</span>&nbsp;Intensification (S6–S9)</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase4)"></div><span style="color:var(--phase4)">PHASE 4</span>&nbsp;Décharge (S10)</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase5)"></div><span style="color:var(--phase5)">PHASE 5</span>&nbsp;Objectif / Peak (S11)</div>
+  </div>
+
+  <!-- SEMAINE TYPE -->
+  <div class="section-header"><h2>SEMAINE TYPE</h2><div class="section-line"></div></div>
+  <div class="week-type-grid">
+    <div class="day-card" style="border-top:3px solid var(--accent)">
+      <div class="day-name">LUN</div>
+      <div class="day-type" style="color:var(--accent)">💪 PUSH</div>
+      <div class="day-detail">Muscu 45min<br>+ Abdos 8min<br>+ Corde 10min</div>
+    </div>
+    <div class="day-card" style="border-top:3px solid var(--accent2)">
+      <div class="day-name">MAR</div>
+      <div class="day-type" style="color:var(--accent2)">🏊 NATATION</div>
+      <div class="day-detail">45 min<br>Protocole prog.<br>Aérobie / tech.</div>
+    </div>
+    <div class="day-card" style="border-top:3px solid var(--accent)">
+      <div class="day-name">MER</div>
+      <div class="day-type" style="color:var(--accent)">🔙 PULL</div>
+      <div class="day-detail">Muscu 45min<br>+ Abdos 8min<br>+ Corde 10min</div>
+    </div>
+    <div class="day-card day-off" style="border-top:3px solid var(--border)">
+      <div class="day-name">JEU</div>
+      <div class="day-type" style="color:var(--muted)">REST ou 🏃</div>
+      <div class="day-detail">Récup. active<br>Marche 30min<br>ou course légère</div>
+    </div>
+    <div class="day-card" style="border-top:3px solid var(--accent)">
+      <div class="day-name">VEN</div>
+      <div class="day-type" style="color:var(--accent)">🦵 LEGS</div>
+      <div class="day-detail">Muscu 45min<br>+ Abdos 8min<br>+ Corde 10min</div>
+    </div>
+    <div class="day-card" style="border-top:3px solid var(--yellow)">
+      <div class="day-name">SAM</div>
+      <div class="day-type" style="color:var(--yellow)">🏃 COURSE</div>
+      <div class="day-detail">30–50 min<br>Z2 cardio<br>Progression/sem</div>
+    </div>
+    <div class="day-card" style="border-top:3px solid var(--accent2)">
+      <div class="day-name">DIM</div>
+      <div class="day-type" style="color:var(--accent2)">🏊 NATATION</div>
+      <div class="day-detail">45 min<br>ou récup totale<br>selon fatigue</div>
+    </div>
+  </div>
+
+  <!-- ANALYSE SÉANCE RÉELLE S1 -->
+  <div class="highlight-box" style="margin-bottom:12px;border-color:rgba(59,130,246,0.3);background:rgba(59,130,246,0.06)">
+    <strong style="color:var(--accent2)">📊 Calibrage S1 — Séance réelle mardi 17/03 :</strong> Développé incliné 2×18kg · Rowing 20kg · Arnold 2×9kg · Squeeze press 2×18kg · Extension triceps poulie 23kg · Curl 2×9kg · Levés jambes 3×20 · Planche 3×1min · Crunch 3×50 · Corde 10min<br>
+    <span style="color:var(--muted)">⚠️ Mix PUSH+PULL → séparé. Arnold + Curl sous-exploités → montés. Crunch 3×50 → câble 3×20 qualité. Planche 1min → RKC. Pecto haut/médian : ajout câbles croisés. Triceps : 2 exercices. Biceps : 2 exercices + curl concentré. Abdos : 3 zones ciblées par séance.</span>
+  </div>
+
+  <!-- PRIORITÉS VISUELLES -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+    <div style="background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:10px 14px;font-size:12px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);font-weight:700;margin-bottom:4px">🎯 PECTO HAUT + MÉDIAN</div>
+      Incliné 30° = pecto supérieur · Câbles croisés bas→haut = pecto médian en tension constante · Squeeze press = contraction médiane · <strong style="color:var(--text)">3 angles différents sur 1 séance</strong>
+    </div>
+    <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:8px;padding:10px 14px;font-size:12px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent2);font-weight:700;margin-bottom:4px">💪 GROS BRAS — 4 EX/SEM</div>
+      PUSH : Triceps poulie + Dips lestés (2/3 du bras) · PULL : Curl alterné + Curl concentré (1/3 du bras) · <strong style="color:var(--text)">Volume bras x2 vs plan initial</strong>
+    </div>
+    <div style="background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:8px;padding:10px 14px;font-size:12px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent3);font-weight:700;margin-bottom:4px">🔥 ABDOS 3 ZONES / SÉA.</div>
+      PUSH : Droits + Core profond · PULL : Obliques + Bas du ventre · LEGS : Core dynamique + Rotation · <strong style="color:var(--text)">Abdos visibles = déficit kcal + 3 zones</strong>
+    </div>
+  </div>
+
+  <!-- STRUCTURE SÉANCES CÔTE À CÔTE -->
+  <div class="section-header"><h2>STRUCTURE DES SÉANCES — PLAN OPTIMISÉ V2</h2><div class="section-line"></div></div>
+
+  <!-- TIMING GUIDE -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+    <div style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.15);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--muted)">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent)">PUSH — MINUTAGE</span><br>
+      Éch. 3min · Pecto (incliné+câbles+squeeze) 14min · Épaules (arnold+élév.) 8min · Triceps (poulie+dips) 8min · Abdos 4min · Corde 10min = <strong style="color:var(--accent)">47min</strong>
+    </div>
+    <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--muted)">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent2)">PULL — MINUTAGE</span><br>
+      Éch. 3min · Dos (tirage+rowing) 12min · Épaule arr. (face pull) 5min · Biceps (curl alt.+concentré) 10min · Abdos 5min · Corde 10min = <strong style="color:var(--accent2)">45min</strong>
+    </div>
+    <div style="background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.15);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--muted)">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent4)">LEGS — MINUTAGE</span><br>
+      Éch. 3min · Quad (squat+leg press) 12min · Post. chaîne (RDL+hip thrust) 10min · Fentes 5min · Abdos 5min · Corde 10min = <strong style="color:var(--accent4)">45min</strong>
+    </div>
+  </div>
+
+  <div class="session-grid">
+    <!-- PUSH -->
+    <div class="session-card">
+      <div class="session-phase-bar" style="background:linear-gradient(90deg,var(--accent),#fb923c)"></div>
+      <div class="session-header">
+        <span class="session-icon">💪</span>
+        <div>
+          <div class="session-title" style="color:var(--accent)">PUSH — LUNDI</div>
+          <div class="session-dur">45–47 MIN · Pecto haut+médian / Épaules / Triceps</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="session-row" style="opacity:0.5"><span class="ex">Échauffement + rotation épaule</span><span class="sets" style="color:var(--muted)">3 min</span></div>
+        <div style="font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— PECTORAUX HAUT + MÉDIAN 🎯 —</div>
+        <div class="session-row"><span class="ex">Développé incliné 30° haltères</span><span class="sets">4×10 · 2×18kg</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent)">Câbles croisés bas→haut ★</span><span class="sets">3×12 · tension constante</span></div>
+        <div class="session-row"><span class="ex">Squeeze Press haltères</span><span class="sets">3×12 · 2×18kg</span></div>
+        <div style="font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— ÉPAULES —</div>
+        <div class="session-row"><span class="ex">Arnold Press haltères</span><span class="sets">3×10 · 2×9→12kg</span></div>
+        <div class="session-row"><span class="ex">Élévations latérales câble</span><span class="sets">3×15 · léger</span></div>
+        <div style="font-size:10px;color:var(--accent);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— TRICEPS 💪 —</div>
+        <div class="session-row"><span class="ex">Extension triceps poulie haute</span><span class="sets">3×12 · 23kg</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent)">Dips lestés (ceinture) ★</span><span class="sets">3×8–10 · lest progressif</span></div>
+        <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— ABDOS : DROITS + PROFOND —</div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Crunch câble genoux</span><span class="sets" style="color:var(--accent3)">3×20 · 1s contraction</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Gainage RKC</span><span class="sets" style="color:var(--accent3)">3×20s · contraction max</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--yellow)">🪢 Corde à sauter</span><span class="sets" style="color:var(--yellow)">10 min</span></div>
+      </div>
+    </div>
+    <!-- PULL -->
+    <div class="session-card">
+      <div class="session-phase-bar" style="background:linear-gradient(90deg,var(--accent2),#60a5fa)"></div>
+      <div class="session-header">
+        <span class="session-icon">🔙</span>
+        <div>
+          <div class="session-title" style="color:var(--accent2)">PULL — MERCREDI</div>
+          <div class="session-dur">45 MIN · Dos V-shape / Biceps volume</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="session-row" style="opacity:0.5"><span class="ex">Échauffement mobilité épaule</span><span class="sets" style="color:var(--muted)">3 min</span></div>
+        <div style="font-size:10px;color:var(--accent2);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— DOS V-SHAPE —</div>
+        <div class="session-row"><span class="ex">Tirage vertical prise large</span><span class="sets">4×10 · RPE 7</span></div>
+        <div class="session-row"><span class="ex">Rowing haltère 1 bras</span><span class="sets">3×10 · 20kg</span></div>
+        <div style="font-size:10px;color:var(--accent2);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— ÉPAULE ARRIÈRE —</div>
+        <div class="session-row"><span class="ex">Face pull câble</span><span class="sets">3×15 · léger</span></div>
+        <div style="font-size:10px;color:var(--accent2);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— BICEPS VOLUME 💪 —</div>
+        <div class="session-row"><span class="ex">Curl haltères alterné</span><span class="sets">4×10 · 2×9→11kg</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent2)">Curl concentré haltère ★</span><span class="sets">3×12 · isolation totale</span></div>
+        <div class="session-row"><span class="ex">Curl marteau câble</span><span class="sets">3×12 · brachialis</span></div>
+        <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— ABDOS : OBLIQUES + BAS —</div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Planche latérale</span><span class="sets" style="color:var(--accent3)">2×35s / côté</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Relevés de jambes suspendus</span><span class="sets" style="color:var(--accent3)">3×15 · tempo lent</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--yellow)">🪢 Corde à sauter</span><span class="sets" style="color:var(--yellow)">10 min</span></div>
+      </div>
+    </div>
+    <!-- LEGS -->
+    <div class="session-card">
+      <div class="session-phase-bar" style="background:linear-gradient(90deg,var(--accent4),#c084fc)"></div>
+      <div class="session-header">
+        <span class="session-icon">🦵</span>
+        <div>
+          <div class="session-title" style="color:var(--accent4)">LEGS — VENDREDI</div>
+          <div class="session-dur">45 MIN · Quad / Chaîne post. / Core dyn.</div>
+        </div>
+      </div>
+      <div class="session-body">
+        <div class="session-row" style="opacity:0.5"><span class="ex">Échauffement mobilité hanche</span><span class="sets" style="color:var(--muted)">3 min</span></div>
+        <div style="font-size:10px;color:var(--accent4);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— QUADRICEPS —</div>
+        <div class="session-row"><span class="ex">Squat barre</span><span class="sets">4×10 · RPE 7</span></div>
+        <div class="session-row"><span class="ex">Leg press machine</span><span class="sets">3×12 · RPE 7</span></div>
+        <div style="font-size:10px;color:var(--accent4);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— CHAÎNE POSTÉRIEURE —</div>
+        <div class="session-row"><span class="ex">Romanian Deadlift barre</span><span class="sets">4×10 · RPE 7–8</span></div>
+        <div class="session-row"><span class="ex">Hip thrust barre banc</span><span class="sets">3×12 · 2s contraction</span></div>
+        <div style="font-size:10px;color:var(--accent4);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— FENTES —</div>
+        <div class="session-row"><span class="ex">Fentes marchées haltères</span><span class="sets">2×10 / jambe</span></div>
+        <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;padding:4px 0 2px;letter-spacing:0.5px">— ABDOS : CORE DYN. + ROTATION —</div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Mountain climbers</span><span class="sets" style="color:var(--accent3)">3×30s · contrôlé</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--accent3)">Wood chop câble ★</span><span class="sets" style="color:var(--accent3)">3×12 / côté · obliques</span></div>
+        <div class="session-row"><span class="ex" style="color:var(--yellow)">🪢 Corde à sauter</span><span class="sets" style="color:var(--yellow)">10 min</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LÉGENDE NOUVEAUTÉS -->
+  <div style="background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:12px;color:var(--muted)">
+    <strong style="color:var(--text)">★ Nouveaux exercices ajoutés v2 :</strong>&nbsp;
+    <span style="color:var(--accent)">Câbles croisés bas→haut</span> (pecto médian tension constante) ·
+    <span style="color:var(--accent)">Dips lestés</span> (triceps chef long + pecto bas) ·
+    <span style="color:var(--accent2)">Curl concentré</span> (pic biceps isolation) ·
+    <span style="color:var(--accent3)">Wood chop câble</span> (obliques en rotation fonctionnelle)
+  </div>
+
+  <!-- RÈGLES TEMPO ET REPOS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+    <div class="card card-accent-left" style="padding:14px 18px">
+      <h3 style="font-size:14px;margin-bottom:8px">⏱️ Temps de repos</h3>
+      <div style="font-size:12px;color:var(--muted);line-height:1.8">
+        Composés lourds (incliné, squat, RDL, tirage) : <strong style="color:var(--text)">75–90s</strong><br>
+        Isolation bras (curl, extension, élévation) : <strong style="color:var(--text)">45–60s</strong><br>
+        Dips lestés : <strong style="color:var(--text)">90s</strong> (mouvement composé)<br>
+        Abdos superset : <strong style="color:var(--text)">20s entre les 2</strong><br>
+        <em style="color:var(--accent)">Ces temps = clé pour tenir 45min pile</em>
+      </div>
+    </div>
+    <div class="card card-accent-blue" style="padding:14px 18px">
+      <h3 style="font-size:14px;margin-bottom:8px">📐 Tempo + Technique clé</h3>
+      <div style="font-size:12px;color:var(--muted);line-height:1.8">
+        S1–S2 : <strong style="color:var(--text)">2-0-1</strong> · S3–S5 : <strong style="color:var(--text)">3-0-1</strong> · S6–S9 : <strong style="color:var(--text)">3-1-1</strong><br>
+        <strong style="color:var(--accent2)">Câbles croisés :</strong> finir en croisant les mains (contraction max)<br>
+        <strong style="color:var(--accent2)">Curl concentré :</strong> coude fixe sur cuisse, supination complète<br>
+        <strong style="color:var(--accent2)">Dips :</strong> légèrement penché avant pour recruter le pecto
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLEAU EXERCICES + PROGRESSION -->
+  <div class="section-header"><h2>TABLEAU DE PROGRESSION — CHARGES RÉELLES S1</h2><div class="section-line"></div></div>
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:20px">
+    <table>
+      <thead>
+        <tr>
+          <th>EXERCICE</th>
+          <th>CIBLE</th>
+          <th>SÉANCE</th>
+          <th><span class="tag tag-blue">S1–S2</span> Base réelle</th>
+          <th><span class="tag">S3–S5</span> Montée</th>
+          <th><span class="tag tag-red">S6–S9</span> Intensification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- PUSH PECTO -->
+        <tr>
+          <td class="td-exercise">Développé incliné 30° haltères</td>
+          <td class="td-muscle">Pecto supérieur</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase"><strong style="color:var(--accent)">2×18kg</strong> · 4×10 · RPE 7</td>
+          <td class="td-phase">2×20kg · 4×10 · RPE 8</td>
+          <td class="td-phase">2×22kg · 4×8 · pause 2s bas</td>
+        </tr>
+        <tr>
+          <td class="td-exercise" style="color:var(--accent)">★ Câbles croisés bas→haut</td>
+          <td class="td-muscle">Pecto médian 🎯</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase">léger · 3×12 · croiser les mains</td>
+          <td class="td-phase">+2kg · 3×12 · RPE 8</td>
+          <td class="td-phase">+4kg · 3×12 + 5s isométrique</td>
+        </tr>
+        <tr>
+          <td class="td-exercise">Squeeze Press haltères</td>
+          <td class="td-muscle">Pecto médian / sternal</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase"><strong style="color:var(--accent)">2×18kg</strong> · 3×12 · tempo 2-0-1</td>
+          <td class="td-phase">2×20kg · 3×12 · RPE 8</td>
+          <td class="td-phase">2×22kg · 4×10 · tempo 3-0-1</td>
+        </tr>
+        <!-- PUSH ÉPAULES -->
+        <tr>
+          <td class="td-exercise">Arnold Press haltères</td>
+          <td class="td-muscle">Épaules 360°</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase"><strong style="color:var(--accent)">2×9kg→12kg</strong> · 3×10</td>
+          <td class="td-phase">2×14kg · 3×10 · RPE 8</td>
+          <td class="td-phase">2×16kg · 4×8 · RPE 9</td>
+        </tr>
+        <tr>
+          <td class="td-exercise">Élévations latérales câble</td>
+          <td class="td-muscle">Deltoïde latéral</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase">léger · 3×15 · contraction haute</td>
+          <td class="td-phase">+1kg · 3×15 · RPE 7</td>
+          <td class="td-phase">+2kg · 3×15 + 5 partielles fin</td>
+        </tr>
+        <!-- PUSH TRICEPS -->
+        <tr>
+          <td class="td-exercise">Extension triceps poulie haute</td>
+          <td class="td-muscle">Triceps long</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase"><strong style="color:var(--accent)">23kg</strong> · 3×12 · RPE 7</td>
+          <td class="td-phase">25kg · 3×12 · RPE 8</td>
+          <td class="td-phase">27kg · 3×12 + drop set</td>
+        </tr>
+        <tr>
+          <td class="td-exercise" style="color:var(--accent)">★ Dips lestés (ceinture)</td>
+          <td class="td-muscle">Triceps chef long 💪</td>
+          <td><span class="tag" style="background:rgba(249,115,22,0.1)">PUSH</span></td>
+          <td class="td-phase">poids corps · 3×8–10 · RPE 7</td>
+          <td class="td-phase">+5kg · 3×8 · RPE 8</td>
+          <td class="td-phase">+10kg · 4×8 · penché avant</td>
+        </tr>
+        <!-- PULL DOS -->
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise">Tirage vertical prise large</td>
+          <td class="td-muscle">Grand dorsal V-shape</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase">RPE 7 · 4×10 · rétraction scap.</td>
+          <td class="td-phase">+5kg · 4×10 · RPE 8</td>
+          <td class="td-phase">+10kg · 4×8 · tempo 3-1-1</td>
+        </tr>
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise">Rowing haltère 1 bras</td>
+          <td class="td-muscle">Dos épais</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase"><strong style="color:var(--accent2)">20kg</strong> · 3×10 · RPE 7</td>
+          <td class="td-phase">22kg · 3×10 · RPE 8</td>
+          <td class="td-phase">24kg · 4×10 · tempo 2-1-2</td>
+        </tr>
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise">Face pull câble</td>
+          <td class="td-muscle">Deltoïde post. / Trapèze</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase">léger · 3×15 · rotation ext.</td>
+          <td class="td-phase">+2kg · 3×15</td>
+          <td class="td-phase">+4kg · 3×15 · full ROM</td>
+        </tr>
+        <!-- PULL BICEPS -->
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise">Curl haltères alterné</td>
+          <td class="td-muscle">Biceps brachial 💪</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase"><strong style="color:var(--accent2)">2×9kg→11kg</strong> · 4×10</td>
+          <td class="td-phase">2×12kg · 4×10 · RPE 8</td>
+          <td class="td-phase">2×14kg · 4×10 · supination</td>
+        </tr>
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise" style="color:var(--accent2)">★ Curl concentré haltère</td>
+          <td class="td-muscle">Pic biceps 💪🎯</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase">léger · 3×12 · coude fixe cuisse</td>
+          <td class="td-phase">+1kg · 3×12 · RPE 8</td>
+          <td class="td-phase">+2kg · 3×12 + torsion poignet</td>
+        </tr>
+        <tr style="background:rgba(59,130,246,0.03)">
+          <td class="td-exercise">Curl marteau câble</td>
+          <td class="td-muscle">Brachialis / Avant-bras</td>
+          <td><span class="tag tag-blue">PULL</span></td>
+          <td class="td-phase">léger · 3×12</td>
+          <td class="td-phase">+2kg · 3×12</td>
+          <td class="td-phase">+4kg · 3×12 · contraction haute</td>
+        </tr>
+        <!-- LEGS -->
+        <tr style="background:rgba(168,85,247,0.03)">
+          <td class="td-exercise">Squat barre</td>
+          <td class="td-muscle">Quad / Fessiers / Core</td>
+          <td><span class="tag tag-purple">LEGS</span></td>
+          <td class="td-phase">RPE 7 · 4×10 · calibrage</td>
+          <td class="td-phase">+5kg · 4×10 · RPE 8</td>
+          <td class="td-phase">+10kg · 4×8 · pause 2s bas</td>
+        </tr>
+        <tr style="background:rgba(168,85,247,0.03)">
+          <td class="td-exercise">Leg press machine</td>
+          <td class="td-muscle">Quadriceps</td>
+          <td><span class="tag tag-purple">LEGS</span></td>
+          <td class="td-phase">RPE 7 · 3×12 · pieds hauts</td>
+          <td class="td-phase">+10kg · 3×12</td>
+          <td class="td-phase">+20kg · 3×10 + 5 partielles</td>
+        </tr>
+        <tr style="background:rgba(168,85,247,0.03)">
+          <td class="td-exercise">Romanian Deadlift barre</td>
+          <td class="td-muscle">Ischio / Fessiers</td>
+          <td><span class="tag tag-purple">LEGS</span></td>
+          <td class="td-phase">RPE 7 · 4×10 · grande amp.</td>
+          <td class="td-phase">+5kg · 4×10 · RPE 8</td>
+          <td class="td-phase">+10kg · 4×10 · étirement max</td>
+        </tr>
+        <tr style="background:rgba(168,85,247,0.03)">
+          <td class="td-exercise">Hip thrust barre banc</td>
+          <td class="td-muscle">Fessiers</td>
+          <td><span class="tag tag-purple">LEGS</span></td>
+          <td class="td-phase">RPE 6 · 3×12 · 2s contraction</td>
+          <td class="td-phase">+5kg · 3×12</td>
+          <td class="td-phase">+10kg · 4×12</td>
+        </tr>
+        <tr style="background:rgba(168,85,247,0.03)">
+          <td class="td-exercise">Fentes marchées haltères</td>
+          <td class="td-muscle">Quad / Fessiers / Équilibre</td>
+          <td><span class="tag tag-purple">LEGS</span></td>
+          <td class="td-phase">léger · 2×10/jambe</td>
+          <td class="td-phase">+2kg · 2×10/jambe</td>
+          <td class="td-phase">+4kg · 3×10/jambe</td>
+        </tr>
+        <!-- ABDOS 3 ZONES -->
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise">Crunch câble genoux</td>
+          <td class="td-muscle">Abdos droits 🎯</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase">3×20 · 1s contraction bas</td>
+          <td class="td-phase">+2kg · 3×20</td>
+          <td class="td-phase">+4kg · 3×20 + 5 partielles</td>
+        </tr>
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise">Gainage RKC</td>
+          <td class="td-muscle">Core profond / transverse 🎯</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase">3×20s · contraction max</td>
+          <td class="td-phase">3×25s</td>
+          <td class="td-phase">4×30s</td>
+        </tr>
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise">Planche latérale</td>
+          <td class="td-muscle">Obliques / poignées d'amour 🎯</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase">2×35s / côté</td>
+          <td class="td-phase">2×45s / côté</td>
+          <td class="td-phase">3×45s + rotation hanche</td>
+        </tr>
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise">Relevés jambes suspendus</td>
+          <td class="td-muscle">Abdos bas / bas ventre 🎯</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase"><strong style="color:var(--accent3)">3×15</strong> · tempo lent 3s</td>
+          <td class="td-phase">3×15 · pause haute 1s</td>
+          <td class="td-phase">4×15 · descente 4s</td>
+        </tr>
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise">Mountain climbers</td>
+          <td class="td-muscle">Core dynamique / cardio</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase">3×30s · contrôlé</td>
+          <td class="td-phase">3×35s</td>
+          <td class="td-phase">3×40s · rythme rapide</td>
+        </tr>
+        <tr style="background:rgba(16,185,129,0.04)">
+          <td class="td-exercise" style="color:var(--accent3)">★ Wood chop câble</td>
+          <td class="td-muscle">Obliques / rotation 🎯</td>
+          <td><span class="tag tag-green">ABDOS</span></td>
+          <td class="td-phase">léger · 3×12 / côté</td>
+          <td class="td-phase">+2kg · 3×12 / côté</td>
+          <td class="td-phase">+4kg · 3×12 · gainage dur</td>
+        </tr>
+        <!-- FINISHER -->
+        <tr style="background:rgba(234,179,8,0.04)">
+          <td class="td-exercise">🪢 Corde à sauter continu</td>
+          <td class="td-muscle">Cardio / Brûleur calorique</td>
+          <td><span class="tag" style="background:rgba(234,179,8,0.12);color:var(--yellow);border-color:rgba(234,179,8,0.3)">FINISHER</span></td>
+          <td class="td-phase"><strong style="color:var(--yellow)">10 min continu</strong> · Z2</td>
+          <td class="td-phase">10 min · rythme élevé soutenu</td>
+          <td class="td-phase">10 min · rythme max contrôlé</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="highlight-box" style="margin-bottom:0">
+      <strong>⚡ Règle de progression :</strong> Ajoute du poids uniquement si RPE ≤8 sur toutes les séries. Priorité : <strong>maintenir les charges</strong> + densifier (repos 75s composés / 60s isolation). Le déficit fait fondre le gras — la muscu protège et sculpte.
+    </div>
+    <div class="highlight-box" style="margin-bottom:0;border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06)">
+      <strong style="color:var(--accent3)">🎯 Rotation abdos par séance :</strong> PUSH = Droits + Core profond · PULL = Obliques + Bas ventre · LEGS = Core dynamique + Rotation. <strong>Les abdos visibles = déficit kcal (90%) + ces 3 zones (10%).</strong>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════ PAGE 2 ═══════════ -->
+<div class="page" id="page2">
+
+  <div style="margin-bottom:28px">
+    <h1 style="margin-bottom:8px">SEMAINE PAR SEMAINE</h1>
+    <p style="color:var(--muted);font-size:13px">16 mars → 1er juin 2026 · Objectif : −636g/semaine</p>
+  </div>
+
+  <div class="phase-legend" style="margin-bottom:24px">
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase1)"></div><span style="color:var(--phase1)">PHASE 1</span>&nbsp;S1–S2</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase2)"></div><span style="color:var(--phase2)">PHASE 2</span>&nbsp;S3–S5</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase3)"></div><span style="color:var(--phase3)">PHASE 3</span>&nbsp;S6–S9</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase4)"></div><span style="color:var(--phase4)">DÉCHARGE</span>&nbsp;S10</div>
+    <div class="phase-tag"><div class="phase-dot" style="background:var(--phase5)"></div><span style="color:var(--phase5)">PEAK</span>&nbsp;S11</div>
+  </div>
+
+  <div class="weeks-grid" id="weeksGrid"></div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════ PAGE 3 ═══════════ -->
+<div class="page" id="page3">
+
+  <div style="margin-bottom:28px">
+    <h1 style="margin-bottom:8px">NUTRITION, NATATION & RÈGLES D'OR</h1>
+    <p style="color:var(--muted);font-size:13px">Plan complet pour la sèche · Objectif : fort et sec</p>
+  </div>
+
+  <!-- NUTRITION -->
+  <div class="section-header"><h2>PLAN NUTRITIONNEL JOURNALIER</h2><div class="section-line"></div></div>
+
+  <div class="highlight-box" style="margin-bottom:16px">
+    <strong>Profil calorique :</strong> ~1 810 kcal/jour · 178g protéines · 162g glucides · 58g lipides &nbsp;|&nbsp; Jeûne 16/8 : fenêtre <strong>12h00 → 20h00</strong> · Entraînement soir en phase nourrie ✅
+  </div>
+
+  <!-- FENETRE JEÛNE VISUELLE -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:14px">
+    <span style="font-size:11px;color:var(--muted);white-space:nowrap;font-family:'JetBrains Mono',monospace">16H JEÛNE</span>
+    <div style="flex:1">
+      <div style="height:10px;background:#1a1d24;border-radius:5px;overflow:hidden;position:relative">
+        <div style="position:absolute;left:0;width:66.6%;height:100%;background:repeating-linear-gradient(90deg,#1e2330 0px,#1e2330 4px,#242830 4px,#242830 8px);border-radius:5px 0 0 5px"></div>
+        <div style="position:absolute;right:0;width:33.4%;height:100%;background:linear-gradient(90deg,var(--accent),var(--yellow));border-radius:0 5px 5px 0"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:5px">
+        <span>00h</span><span>04h</span><span>08h</span><span style="color:var(--accent);font-weight:700">12h ▶ OUVERTURE</span><span>16h</span><span style="color:var(--yellow);font-weight:700">20h ■ FERMETURE</span><span>00h</span>
+      </div>
+    </div>
+    <span style="font-size:11px;color:var(--accent);white-space:nowrap;font-family:'JetBrains Mono',monospace">8H REPAS</span>
+  </div>
+
+  <div class="nutrition-timeline">
+    <!-- 06h00 RÉVEIL -->
+    <div class="nt-time" style="color:var(--muted)">06h00</div>
+    <div class="nt-card" style="border-color:rgba(0,0,0,0.2);background:rgba(0,0,0,0.2)">
+      <div class="nt-card-title" style="color:var(--muted)">⏰ RÉVEIL — JEÛNE ACTIF · 0 kcal</div>
+      <div class="nt-card-detail">
+        <strong style="color:var(--text)">500ml eau froide</strong> dès le réveil · <strong style="color:var(--text)">1–2 cafés noirs</strong> (sans sucre ni lait)<br>
+        Option : eau citronnée · thé vert · Aucun aliment avant 12h<br>
+        <em style="color:var(--muted)">Café + eau froide = légère thermogenèse + coupe-faim naturel pendant le jeûne</em>
+      </div>
+    </div>
+
+    <!-- 08h–11h TRAVAIL -->
+    <div class="nt-time" style="color:var(--muted)">08h–11h</div>
+    <div class="nt-card" style="border-color:rgba(0,0,0,0.2);background:rgba(0,0,0,0.15)">
+      <div class="nt-card-title" style="color:var(--muted)">💼 TRAVAIL — JEÛNE MAINTENU · 0 kcal</div>
+      <div class="nt-card-detail">
+        500ml–1L eau plate ou gazeuse en continu · Thé vert optionnel<br>
+        <em style="color:var(--muted)">Si faim intense : grand verre d'eau froide + attendre 5min → passe dans 95% des cas</em>
+      </div>
+    </div>
+
+    <!-- 12h00 DÉJEUNER -->
+    <div class="nt-time">12h00</div>
+    <div class="nt-card" style="border-left:3px solid var(--accent)">
+      <div class="nt-card-title">🥗 DÉJEUNER — Rupture du jeûne · <strong style="color:var(--accent)">520 kcal</strong></div>
+      <div class="nt-card-detail" style="margin-bottom:10px">Toujours commencer par protéines + fibres pour stabiliser la glycémie post-jeûne</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍗 Poulet cru 150g</div>
+          <div style="font-size:11px;color:var(--muted)">→ ~120g cuit, grillé/poêlé sans matière grasse</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">28g prot · 165 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍚 Riz complet 150g cuit</div>
+          <div style="font-size:11px;color:var(--muted)">~50g cru · index glycémique bas</div>
+          <div style="font-size:10px;color:#eab308;font-family:'JetBrains Mono',monospace;margin-top:3px">4g prot · 32g gluc · 140 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🥦 Légumes vapeur</div>
+          <div style="font-size:11px;color:var(--muted)">Brocoli, courgette, haricots verts — quantité illimitée</div>
+          <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;margin-top:3px">fibres · satiété · ~30 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🫒 Huile d'olive 10g</div>
+          <div style="font-size:11px;color:var(--muted)">1 filet sur légumes</div>
+          <div style="font-size:10px;color:#60a5fa;font-family:'JetBrains Mono',monospace;margin-top:3px">oméga-9 · 90 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🥛 Yaourt grec 200ml</div>
+          <div style="font-size:11px;color:var(--muted)">Fage 0% ou 2% — en dessert</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">18g prot · 120 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🫐 Fruits rouges 80g</div>
+          <div style="font-size:11px;color:var(--muted)">Myrtilles / framboises sur le yaourt</div>
+          <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;margin-top:3px">antioxydants · 40 kcal</div>
+        </div>
+      </div>
+      <div class="nt-macros">
+        <span class="macro-badge macro-p">P: 52g</span>
+        <span class="macro-badge macro-g">G: 48g</span>
+        <span class="macro-badge macro-l">L: 14g</span>
+        <span class="macro-badge macro-k">520 kcal</span>
+      </div>
+    </div>
+
+    <!-- 15h30 COLLATION -->
+    <div class="nt-time" style="color:var(--yellow)">15h30</div>
+    <div class="nt-card" style="border-left:3px solid var(--yellow)">
+      <div class="nt-card-title">⚡ COLLATION PRÉ-SPORT · <strong style="color:var(--yellow)">310 kcal</strong></div>
+      <div class="nt-card-detail" style="margin-bottom:10px">2h30 avant l'entraînement · Ne jamais sauter les jours muscu</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🟡 Protéine de pois 25g</div>
+          <div style="font-size:11px;color:var(--muted)">Shaker avec eau froide</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">20–22g prot · 95 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🫙 Fromage blanc 0%</div>
+          <div style="font-size:11px;color:var(--muted)">150g — texture + satiété</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">15g prot · 75 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🌾 Flocons d'avoine 30g</div>
+          <div style="font-size:11px;color:var(--muted)">Secs — glucides lents pour l'effort</div>
+          <div style="font-size:10px;color:#eab308;font-family:'JetBrains Mono',monospace;margin-top:3px">3g prot · 20g gluc · 110 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍌 ½ Banane</div>
+          <div style="font-size:11px;color:var(--muted)">Potassium + glucides rapides</div>
+          <div style="font-size:10px;color:#eab308;font-family:'JetBrains Mono',monospace;margin-top:3px">12g gluc · 45 kcal</div>
+        </div>
+      </div>
+      <div class="nt-macros">
+        <span class="macro-badge macro-p">P: 38g</span>
+        <span class="macro-badge macro-g">G: 36g</span>
+        <span class="macro-badge macro-l">L: 8g</span>
+        <span class="macro-badge macro-k">310 kcal</span>
+      </div>
+    </div>
+
+    <!-- 18h30 ENTRAÎNEMENT -->
+    <div class="nt-time" style="color:var(--accent3)">18h30</div>
+    <div class="nt-card" style="border-left:3px solid var(--accent3);background:rgba(16,185,129,0.04)">
+      <div class="nt-card-title">🏋️ ENTRAÎNEMENT · 45–65 min · <strong style="color:var(--accent3)">−350 kcal</strong></div>
+      <div class="nt-card-detail">
+        <strong style="color:var(--text)">Eau uniquement</strong> (500ml–1L pendant l'effort)<br>
+        Électrolytes optionnels si forte transpiration : pincée de sel + jus de citron<br>
+        <em style="color:var(--muted)">Tu es en phase nourrie → performances optimales garanties. Pas de BCAA nécessaire.</em>
+      </div>
+    </div>
+
+    <!-- 19h45 DÎNER -->
+    <div class="nt-time">19h45</div>
+    <div class="nt-card" style="border-left:3px solid var(--accent2)">
+      <div class="nt-card-title">🍽️ DÎNER POST-SPORT — Dernier repas · <strong style="color:var(--accent2)">680 kcal</strong></div>
+      <div class="nt-card-detail" style="margin-bottom:10px">Repas le plus important : recharge glycogène + synthèse protéique nocturne. À terminer avant 20h.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍗 Poulet cru 150g</div>
+          <div style="font-size:11px;color:var(--muted)">2e portion · grillé citron + herbes</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">28g prot · 165 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍠 Patate douce 180g</div>
+          <div style="font-size:11px;color:var(--muted)">Cuite au four · glucides de récupération</div>
+          <div style="font-size:10px;color:#eab308;font-family:'JetBrains Mono',monospace;margin-top:3px">3g prot · 38g gluc · 160 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🥗 Salade verte + tomates</div>
+          <div style="font-size:11px;color:var(--muted)">Grande portion · fibres · enzymes digestives</div>
+          <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;margin-top:3px">volume · satiété · ~30 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🥑 Avocat ½</div>
+          <div style="font-size:11px;color:var(--muted)">Bons lipides · récupération musculaire</div>
+          <div style="font-size:10px;color:#60a5fa;font-family:'JetBrains Mono',monospace;margin-top:3px">2g prot · 15g lip · 120 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🥚 2 œufs entiers</div>
+          <div style="font-size:11px;color:var(--muted)">Brouillés ou à la coque</div>
+          <div style="font-size:10px;color:#ef4444;font-family:'JetBrains Mono',monospace;margin-top:3px">12g prot · 7g lip · 140 kcal</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.25);border-radius:6px;padding:8px 10px">
+          <div style="font-weight:600;font-size:13px">🍫 Chocolat noir 85% · 15g</div>
+          <div style="font-size:11px;color:var(--muted)">1–2 carrés · magnésium + plaisir</div>
+          <div style="font-size:10px;color:var(--accent3);font-family:'JetBrains Mono',monospace;margin-top:3px">antioxydants · 80 kcal</div>
+        </div>
+      </div>
+      <div class="nt-macros">
+        <span class="macro-badge macro-p">P: 58g</span>
+        <span class="macro-badge macro-g">G: 62g</span>
+        <span class="macro-badge macro-l">L: 22g</span>
+        <span class="macro-badge macro-k">680 kcal</span>
+      </div>
+    </div>
+
+    <!-- 20h00 FERMETURE -->
+    <div class="nt-time" style="color:var(--accent4)">20h00</div>
+    <div class="nt-card" style="border-left:3px solid var(--accent4)">
+      <div class="nt-card-title">🔒 FERMETURE DE LA FENÊTRE · 0 kcal</div>
+      <div class="nt-card-detail">
+        <strong style="color:var(--text)">Tisane</strong> camomille / verveine / menthe · 0 kcal<br>
+        <strong style="color:var(--text)">Brossage des dents</strong> immédiat — signal psychologique de fermeture<br>
+        <em style="color:var(--muted)">La tisane + le brossage coupent net les envies de grignoter en soirée. Hack comportemental puissant.</em>
+      </div>
+    </div>
+
+    <!-- 22h30 SOMMEIL -->
+    <div class="nt-time" style="color:var(--muted)">22h30</div>
+    <div class="nt-card" style="border-color:rgba(0,0,0,0.2);background:rgba(0,0,0,0.15)">
+      <div class="nt-card-title" style="color:var(--muted)">😴 SOMMEIL — 7h30 minimum</div>
+      <div class="nt-card-detail">
+        Chambre à 18–19°C · Pas d'écran 30min avant · Coucher avant 23h30<br>
+        <em style="color:var(--muted)">GH nocturne + synthèse protéique + lipolyse : le sommeil est ta phase la plus anabolique</em>
+      </div>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="nt-time" style="color:var(--muted);font-size:11px">BILAN</div>
+    <div class="nt-card" style="background:rgba(249,115,22,0.06);border-color:rgba(249,115,22,0.2)">
+      <div class="nt-card-title" style="color:var(--accent)">BILAN JOURNÉE PARFAITE — Jour d'entraînement muscu</div>
+      <div class="nt-macros" style="margin-top:0">
+        <span class="macro-badge macro-p" style="font-size:13px;padding:4px 12px">Protéines ~178g ✅</span>
+        <span class="macro-badge macro-g" style="font-size:13px;padding:4px 12px">Glucides ~162g ✅</span>
+        <span class="macro-badge macro-l" style="font-size:13px;padding:4px 12px">Lipides ~58g ✅</span>
+        <span class="macro-badge macro-k" style="font-size:13px;padding:4px 12px">~1 810 kcal ✅</span>
+      </div>
+      <div class="nt-card-detail" style="margin-top:10px">
+        <strong style="color:var(--text)">Jours repos :</strong> −200 kcal — supprimer la ½ banane + réduire flocons à 20g · pas de shaker protéine<br>
+        <strong style="color:var(--text)">Jours natation / course :</strong> identique au jour muscu · protéine de pois post-effort dans les 30min<br>
+        <strong style="color:var(--text)">Protéine de pois :</strong> 25g post-sport (natation, course, muscu) — remplace ou complète si repas léger ce jour-là
+      </div>
+    </div>
+  </div>
+
+  <!-- NATATION -->
+  <div class="section-header"><h2>PROTOCOLE NATATION PROGRESSIF</h2><div class="section-line"></div></div>
+  <div class="swim-grid">
+    <div class="swim-card" style="border-top-color:var(--phase1)">
+      <div class="swim-phase" style="color:var(--phase1)">PHASE 1 — TECHNIQUE</div>
+      <div class="swim-weeks" style="color:var(--phase1)">Semaines 1–3</div>
+      <div class="swim-row"><strong>Durée :</strong> 45 min</div>
+      <div class="swim-row"><strong>Volume :</strong> 1 000–1 200m</div>
+      <div class="swim-row"><strong>Structure :</strong></div>
+      <div class="swim-row">→ Échauff. 200m crawl lent</div>
+      <div class="swim-row">→ 4×100m avec 30s récup</div>
+      <div class="swim-row">→ Retour calme 200m dos</div>
+      <div class="swim-row"><strong>Focus :</strong> Alignement, respiration bilatérale, coulée</div>
+      <div class="swim-row" style="margin-top:6px;color:var(--accent3)">💡 FC cible : Z1–Z2 (60–70% FCmax)</div>
+    </div>
+    <div class="swim-card" style="border-top-color:var(--phase2)">
+      <div class="swim-phase" style="color:var(--phase2)">PHASE 2 — ENDURANCE</div>
+      <div class="swim-weeks" style="color:var(--phase2)">Semaines 4–7</div>
+      <div class="swim-row"><strong>Durée :</strong> 45 min</div>
+      <div class="swim-row"><strong>Volume :</strong> 1 400–1 800m</div>
+      <div class="swim-row"><strong>Structure :</strong></div>
+      <div class="swim-row">→ Échauff. 200m mixte</div>
+      <div class="swim-row">→ 6×100m ou 3×200m · 20s récup</div>
+      <div class="swim-row">→ 200m crawl aérobie continu</div>
+      <div class="swim-row">→ Retour 100m dos</div>
+      <div class="swim-row"><strong>Focus :</strong> Maintenir rythme régulier, augmenter distance</div>
+      <div class="swim-row" style="margin-top:6px;color:var(--accent3)">💡 FC cible : Z2 (65–75% FCmax)</div>
+    </div>
+    <div class="swim-card" style="border-top-color:var(--phase3)">
+      <div class="swim-phase" style="color:var(--phase3)">PHASE 3 — INTENSITÉ</div>
+      <div class="swim-weeks" style="color:var(--phase3)">Semaines 8–11</div>
+      <div class="swim-row"><strong>Durée :</strong> 45 min</div>
+      <div class="swim-row"><strong>Volume :</strong> 2 000–2 400m</div>
+      <div class="swim-row"><strong>Structure :</strong></div>
+      <div class="swim-row">→ Échauff. 300m crawl</div>
+      <div class="swim-row">→ 8×100m progressifs · 15s récup</div>
+      <div class="swim-row">→ 400m continu aérobie soutenu</div>
+      <div class="swim-row">→ 4×50m sprint · Retour 100m</div>
+      <div class="swim-row"><strong>Focus :</strong> Densité + vitesse de nage</div>
+      <div class="swim-row" style="margin-top:6px;color:var(--accent3)">💡 FC cible : Z2–Z3 (70–80% FCmax)</div>
+    </div>
+  </div>
+
+  <!-- COURSE -->
+  <div class="section-header"><h2>PROTOCOLE COURSE À PIED</h2><div class="section-line"></div></div>
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:28px">
+    <table>
+      <thead><tr>
+        <th>SEMAINES</th><th>DURÉE</th><th>TYPE</th><th>ALLURE</th><th>OBJECTIF BRÛLURE</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>S1–S2</td><td>30 min</td><td>Footing Z2</td><td>Conversation possible</td><td>300–350 kcal · Mise en place</td></tr>
+        <tr><td>S3–S4</td><td>35 min</td><td>Footing Z2 + accélérations</td><td>Z2 + 2×5min Z3</td><td>380–420 kcal</td></tr>
+        <tr><td>S5–S6</td><td>40 min</td><td>Footing progressif</td><td>Z2 progressif vers Z3</td><td>420–480 kcal</td></tr>
+        <tr><td>S7–S8</td><td>45 min</td><td>Tempo run</td><td>20min Z2 + 15min Z3 + 10min Z2</td><td>500–550 kcal</td></tr>
+        <tr><td>S9</td><td>50 min</td><td>Long run Z2</td><td>Z2 soutenu</td><td>550–600 kcal</td></tr>
+        <tr><td>S10</td><td>30 min</td><td>Récupération</td><td>Z1 très léger</td><td>250 kcal · Décharge</td></tr>
+        <tr><td>S11</td><td>40 min</td><td>Footing léger</td><td>Z2 agréable</td><td>420 kcal · Peak</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- RÉCUPÉRATION -->
+  <div class="section-header"><h2>TABLEAU RÉCUPÉRATION</h2><div class="section-line"></div></div>
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:28px">
+    <table class="recovery-table">
+      <thead><tr>
+        <th>PILIER</th><th>RECOMMANDATION</th><th>FRÉQUENCE</th><th>IMPACT SÈCHE</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>😴 Sommeil</strong></td>
+          <td>7h30–8h minimum · chambre froide · pas d'écran 30min avant</td>
+          <td>Chaque nuit</td>
+          <td class="tag tag-red" style="display:inline-block">CRITIQUE</td>
+        </tr>
+        <tr>
+          <td><strong>💧 Hydratation</strong></td>
+          <td>3L/jour minimum · 500ml eau au réveil · eau pendant effort</td>
+          <td>En continu</td>
+          <td class="tag" style="display:inline-block">ÉLEVÉ</td>
+        </tr>
+        <tr>
+          <td><strong>🧘 Mobilité</strong></td>
+          <td>10–15min stretching dynamique post-séance · hanche + épaule prioritaires</td>
+          <td>3–4×/semaine</td>
+          <td class="tag tag-blue" style="display:inline-block">MODÉRÉ</td>
+        </tr>
+        <tr>
+          <td><strong>🛁 Récup. musculaire</strong></td>
+          <td>Douche froide 2min post-entraînement · massage rouleau foam roller</td>
+          <td>Après chaque séance</td>
+          <td class="tag tag-green" style="display:inline-block">MODÉRÉ</td>
+        </tr>
+        <tr>
+          <td><strong>🧠 Stress / Cortisol</strong></td>
+          <td>10min marche après dîner · cohérence cardiaque 5min/jour · éviter sur-entraînement</td>
+          <td>Quotidien</td>
+          <td class="tag tag-red" style="display:inline-block">CRITIQUE</td>
+        </tr>
+        <tr>
+          <td><strong>📅 Semaine décharge</strong></td>
+          <td>S10 : volume −40% · pas de HIIT · natation légère uniquement · +200 kcal/jour</td>
+          <td>S10 uniquement</td>
+          <td class="tag" style="display:inline-block">ÉLEVÉ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6 RÈGLES D'OR -->
+  <div class="section-header"><h2>6 RÈGLES D'OR — FORT ET SEC</h2><div class="section-line"></div></div>
+  <div class="rules-grid">
+    <div class="rule-card">
+      <div class="rule-num">01</div>
+      <div>
+        <div class="rule-title" style="color:var(--accent)">🔥 LE DÉFICIT FAIT LE TRAVAIL, PAS LE CARDIO</div>
+        <div class="rule-text">Le cardio brûle des calories mais ne remplace pas un déficit alimentaire bien calibré. Ta priorité : atteindre 1 800 kcal/jour avec 180g de protéines. La corde + la natation + la course sont des <em>accélérateurs</em>, pas la cause de ta perte de gras. Ne compense jamais une mauvaise semaine alimentaire par un excès de cardio — tu t'épuises sans résultat.</div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">02</div>
+      <div>
+        <div class="rule-title" style="color:var(--accent2)">💪 MAINTIENS LES CHARGES À TOUT PRIX</div>
+        <div class="rule-text">En sèche, la tentation de réduire les poids est forte. C'est une erreur. Ton signal musculaire doit rester identique ou supérieur pour envoyer au corps le message : «garde ce muscle». Si tu perds de la force, tu perds du muscle, pas juste du gras. Adapte le volume (moins de séries) avant de toucher à l'intensité. Objectif : sortir de ces 11 semaines aussi fort qu'en entrant, juste plus léger.</div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">03</div>
+      <div>
+        <div class="rule-title" style="color:var(--accent3)">🌙 LE SOMMEIL EST TON MEILLEUR ANABOLISANT</div>
+        <div class="rule-text">7h30 minimum de sommeil optimise la leptine (hormone satiété), réduit le cortisol (hormone qui stocke le gras abdominal) et maximise la GH nocturne (hormone de récupération musculaire). Avec ton travail en journée + entraînements le soir, le sommeil est ton levier N°1. Un déficit de sommeil de 1h = +300 kcal d'envies alimentaires supplémentaires le lendemain selon les études.</div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">04</div>
+      <div>
+        <div class="rule-title" style="color:var(--yellow)">⚡ CASSE LES PLATEAUX AVEC LA RÈGLE DU RE-FEED</div>
+        <div class="rule-text">Si après 3 semaines consécutives sans perte de poids tu stagnes : 1 jour re-feed par semaine (ajoute 400 kcal de glucides complexes uniquement — riz, avoine, patate douce). Cela relance la leptine et casse l'adaptation métabolique. Ne mange pas plus de gras ce jour-là. Le plateau après S5–S6 est NORMAL — ne panique pas, applique le re-feed et continue.</div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">05</div>
+      <div>
+        <div class="rule-title" style="color:var(--accent4)">😤 GÈRE LE CORTISOL POUR ATTAQUER LE VENTRE</div>
+        <div class="rule-text">La graisse abdominale et les poignées d'amour sont directement liées au cortisol chronique. En sèche agressive (déficit + travail + stress), le cortisol monte. Contre-mesures : cohérence cardiaque 5min/jour (app Respirelax), marche 15min après le dîner, évite le café après 14h, dormir avant 23h30. Sans gestion du stress, même le meilleur programme ne décrasserait pas complètement le ventre.</div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">06</div>
+      <div>
+        <div class="rule-title" style="color:var(--accent3)">💧 L'HYDRATATION ACCÉLÈRE LA LIPOLYSE</div>
+        <div class="rule-text">3L d'eau/jour en sèche : augmente la thermogenèse (+30% pendant 30–40min post ingestion eau froide), optimise le transport des acides gras libres lors de la lipolyse, réduit la rétention d'eau paradoxale et améliore la performance à l'entraînement de 5–8%. Pratique : 500ml au réveil, 1L avant midi, 1L entraînement/soirée, 500ml dîner. Ajoute électrolytes (pincée sel, jus citron) si transpiration forte.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANTI-PLATEAU -->
+  <div class="card card-accent-left" style="margin-bottom:20px">
+    <h3 style="color:var(--accent);margin-bottom:10px">🔄 RÈGLE ANTI-PLATEAU — Bonus</h3>
+    <div style="font-size:13px;color:var(--muted);line-height:1.8">
+      <strong style="color:var(--text)">Semaine sans résultat sur la balance ?</strong> Vérifie dans l'ordre :
+      <br>1. Sommeil &lt;7h cette semaine ? → Priorité absolue avant tout autre ajustement
+      <br>2. Calories réelles vs estimées ? → Peser les aliments 3 jours consécutifs (la sous-estimation moyenne est de 30%)
+      <br>3. Stress inhabituel (travail, famille) ? → Semaine de décharge courte + re-feed
+      <br>4. Programme identique depuis +3 semaines ? → Augmenter le volume ou changer un exercice par groupe
+      <br><strong style="color:var(--accent3)">La balance peut stagner 1–2 semaines alors que tu perds du gras (rétention d'eau post-effort) → mesure aussi le tour de taille et les photos mensuelles.</strong>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════ PAGE 4 ═══════════ -->
+<div class="page" id="page4">
+
+  <div style="margin-bottom:20px">
+    <h1 style="margin-bottom:8px">SÉANCES DÉTAILLÉES</h1>
+    <p style="color:var(--muted);font-size:13px">Exercice · Séries · Répétitions · Charge · Repos · Technique · Phase par phase</p>
+  </div>
+
+  <!-- PHASE SELECTOR -->
+  <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap" id="phaseSelector">
+    <button onclick="showPhase('s1s2',this)" class="phase-btn active-phase" style="background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.4);color:#60a5fa;border-radius:6px;padding:8px 16px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">S1–S2 · MISE EN PLACE</button>
+    <button onclick="showPhase('s3s5',this)" class="phase-btn" style="background:rgba(30,32,40,0.8);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:8px 16px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">S3–S5 · MONTÉE EN CHARGE</button>
+    <button onclick="showPhase('s6s9',this)" class="phase-btn" style="background:rgba(30,32,40,0.8);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:8px 16px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">S6–S9 · INTENSIFICATION</button>
+    <button onclick="showPhase('s10',this)" class="phase-btn" style="background:rgba(30,32,40,0.8);border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:8px 16px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">S10 · DÉCHARGE</button>
+  </div>
+
+  <!-- PHASES CONTENT -->
+  <div id="phase-s1s2">
+    <div class="highlight-box" style="margin-bottom:20px">
+      <strong>Phase 1 · S1–S2 · 16–29 mars :</strong> Calibrage des charges réelles · Tempo 2-0-1 · Repos généreux · Objectif : sentir chaque muscle, pas s'épuiser · RPE cible 6–7
+    </div>
+    <div id="days-s1s2"></div>
+  </div>
+
+  <div id="phase-s3s5" style="display:none">
+    <div class="highlight-box" style="margin-bottom:20px;border-color:rgba(249,115,22,0.3);background:rgba(249,115,22,0.06)">
+      <strong>Phase 2 · S3–S5 · 30 mars–19 avril :</strong> Montée en charge progressive · Tempo 3-0-1 · Repos réduit à 75s · RPE cible 7–8 · Ajoute du poids si toutes les séries terminées avec 2 reps en réserve
+    </div>
+    <div id="days-s3s5"></div>
+  </div>
+
+  <div id="phase-s6s9" style="display:none">
+    <div class="highlight-box" style="margin-bottom:20px;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.06)">
+      <strong>Phase 3 · S6–S9 · 20 avril–17 mai :</strong> Intensification maximale · Tempo 3-1-1 · Repos 60–75s isolation / 75–90s composés · Drop sets + techniques avancées · RPE cible 8–9
+    </div>
+    <div id="days-s6s9"></div>
+  </div>
+
+  <div id="phase-s10" style="display:none">
+    <div class="highlight-box" style="margin-bottom:20px;border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.06)">
+      <strong>Phase 4 · S10 · 18–24 mai :</strong> Décharge obligatoire · Volume −40% · Charges identiques · Repos 90s · Pas de techniques avancées · +200 kcal/jour · Recharge pour le peak S11
+    </div>
+    <div id="days-s10"></div>
+  </div>
+
+</div>
+
+<style>
+.day-detail-card { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:20px; }
+.day-detail-header { padding:16px 20px; display:flex; align-items:center; gap:14px; border-bottom:1px solid var(--border); }
+.day-detail-icon { font-size:22px; }
+.day-detail-title { font-family:'Bebas Neue',sans-serif; font-size:20px; letter-spacing:1.5px; }
+.day-detail-sub { font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; margin-top:2px; }
+.day-detail-body { padding:0; }
+
+.ex-section { padding:6px 20px 2px; background:rgba(0,0,0,0.15); border-bottom:1px solid rgba(255,255,255,0.03); }
+.ex-section-label { font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:2px; }
+
+.ex-row { display:grid; grid-template-columns:2fr 60px 60px 90px 70px 1fr; gap:0; border-bottom:1px solid rgba(255,255,255,0.04); }
+.ex-row:last-child { border-bottom:none; }
+.ex-row > div { padding:10px 12px; font-size:12px; display:flex; align-items:center; }
+.ex-row > div:first-child { padding-left:20px; }
+.ex-row > div:last-child { padding-right:20px; }
+
+.ex-header-row { display:grid; grid-template-columns:2fr 60px 60px 90px 70px 1fr; gap:0; background:rgba(0,0,0,0.2); border-bottom:1px solid var(--border); }
+.ex-header-row > div { padding:7px 12px; font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--muted); }
+.ex-header-row > div:first-child { padding-left:20px; }
+.ex-header-row > div:last-child { padding-right:20px; }
+
+.ex-name { font-weight:600; color:var(--text); }
+.ex-star { color:var(--accent); }
+.ex-sets { font-family:'JetBrains Mono',monospace; color:var(--accent); font-weight:700; }
+.ex-reps { font-family:'JetBrains Mono',monospace; color:var(--yellow); }
+.ex-weight { font-family:'JetBrains Mono',monospace; color:#ef4444; font-weight:700; }
+.ex-rest { font-family:'JetBrains Mono',monospace; color:var(--accent2); font-size:11px; }
+.ex-tip { font-size:11px; color:var(--muted); font-style:italic; line-height:1.4; }
+
+.abdos-badge { display:inline-block; background:rgba(16,185,129,0.12); color:var(--accent3); border:1px solid rgba(16,185,129,0.25); border-radius:4px; padding:1px 6px; font-size:9px; font-family:'JetBrains Mono',monospace; font-weight:700; margin-left:4px; }
+.finisher-row { background:rgba(234,179,8,0.05); }
+.finisher-row .ex-name { color:var(--yellow); }
+
+@media(max-width:800px){
+  .ex-row, .ex-header-row { grid-template-columns:1fr; }
+  .ex-row > div { border-bottom:none; padding:4px 20px; }
+  .ex-row > div:first-child { padding-top:10px; font-weight:700; }
+  .ex-row > div:last-child { padding-bottom:10px; color:var(--muted); }
+}
+</style>
+
+<script>
+let calBuilt = false;
+function showPage(n, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page' + n).classList.add('active');
+  btn.classList.add('active');
+  if (n === 5 && !calBuilt) { buildCalendar(); calBuilt = true; }
+}
+
+function showPhase(phase, btn) {
+  ['s1s2','s3s5','s6s9','s10'].forEach(p => {
+    document.getElementById('phase-'+p).style.display = p === phase ? 'block' : 'none';
+  });
+  document.querySelectorAll('.phase-btn').forEach(b => {
+    b.style.background = 'rgba(30,32,40,0.8)';
+    b.style.borderColor = 'var(--border)';
+    b.style.color = 'var(--muted)';
+  });
+  const colors = { s1s2: ['rgba(59,130,246,0.15)','rgba(59,130,246,0.4)','#60a5fa'], s3s5: ['rgba(249,115,22,0.15)','rgba(249,115,22,0.4)','#f97316'], s6s9: ['rgba(239,68,68,0.15)','rgba(239,68,68,0.4)','#ef4444'], s10: ['rgba(16,185,129,0.15)','rgba(16,185,129,0.4)','#10b981'] };
+  const c = colors[phase];
+  btn.style.background = c[0]; btn.style.borderColor = c[1]; btn.style.color = c[2];
+}
+
+// DATA STRUCTURE
+const phases = {
+  s1s2: {
+    push: {
+      exercises: [
+        { section: '— PECTORAUX HAUT + MÉDIAN 🎯 —', sectionColor: '#f97316' },
+        { name: 'Développé incliné 30° haltères', sets: 4, reps: '10', weight: '2×18kg', rest: '90s', tip: 'Coudes à 75° · descente 2s · pas de rebond en bas', star: false },
+        { name: 'Câbles croisés bas→haut ★', sets: 3, reps: '12', weight: 'léger', rest: '60s', tip: 'Poulies basses · trajectoire en arc · croiser les mains en haut', star: true },
+        { name: 'Squeeze Press haltères', sets: 3, reps: '12', weight: '2×18kg', rest: '60s', tip: 'Presser les haltères l\'un contre l\'autre tout le long', star: false },
+        { section: '— ÉPAULES —', sectionColor: '#f97316' },
+        { name: 'Arnold Press haltères', sets: 3, reps: '10', weight: '2×9kg', rest: '75s', tip: 'Partir paume vers soi · rotation complète vers l\'ext.', star: false },
+        { name: 'Élévations latérales câble', sets: 3, reps: '15', weight: 'léger', rest: '45s', tip: 'Câble bas · bras légèrement fléchi · pause 1s en haut', star: false },
+        { section: '— TRICEPS 💪 —', sectionColor: '#f97316' },
+        { name: 'Extension triceps poulie haute', sets: 3, reps: '12', weight: '23kg', rest: '60s', tip: 'Coudes fixes · extension complète · contraction dure en bas', star: false },
+        { name: 'Dips lestés (ceinture) ★', sets: 3, reps: '8–10', weight: 'poids corps', rest: '90s', tip: 'Légèrement penché avant · descente 2s · bras tendus mais pas verrouillés', star: true },
+        { section: '— ABDOS : DROITS + PROFOND —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Crunch câble genoux', sets: 3, reps: '20', weight: 'léger', rest: '30s', tip: '1s de contraction en bas · expirer fort · ne tire pas avec le cou', star: false, isAbdos: true },
+        { name: 'Gainage RKC', sets: 3, reps: '20s', weight: '—', rest: '30s', tip: 'Tout contracter : fessiers + abdos + cuisses · respiration courte', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme Z2 modéré · respiration nasale · continu sans arrêt', star: false, isFinisher: true },
+      ]
+    },
+    pull: {
+      exercises: [
+        { section: '— DOS V-SHAPE —', sectionColor: '#3b82f6' },
+        { name: 'Tirage vertical prise large', sets: 4, reps: '10', weight: 'RPE 7', rest: '90s', tip: 'Rétraction des omoplates avant de tirer · coudes dans les poches', star: false },
+        { name: 'Rowing haltère 1 bras', sets: 3, reps: '10', weight: '20kg', rest: '75s', tip: 'Dos plat · rotation du tronc légère · coude haut en fin de mouvement', star: false },
+        { section: '— ÉPAULE ARRIÈRE —', sectionColor: '#3b82f6' },
+        { name: 'Face pull câble', sets: 3, reps: '15', weight: 'léger', rest: '45s', tip: 'Poulie haute · tirer vers le visage · rotation externe en fin', star: false },
+        { section: '— BICEPS VOLUME 💪 —', sectionColor: '#3b82f6' },
+        { name: 'Curl haltères alterné', sets: 4, reps: '10', weight: '2×9kg', rest: '60s', tip: 'Supination complète en haut · coudes fixes · descente contrôlée 2s', star: false },
+        { name: 'Curl concentré haltère ★', sets: 3, reps: '12', weight: 'léger', rest: '45s', tip: 'Coude appuyé sur cuisse intérieure · contraction max en haut · focus pic', star: true },
+        { name: 'Curl marteau câble', sets: 3, reps: '12', weight: 'léger', rest: '45s', tip: 'Prise neutre · brachialis + avant-bras · plein ROM', star: false },
+        { section: '— ABDOS : OBLIQUES + BAS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Planche latérale', sets: 2, reps: '35s/côté', weight: '—', rest: '30s', tip: 'Hanches hautes · alignement parfait · respiration courte', star: false, isAbdos: true },
+        { name: 'Relevés de jambes suspendus', sets: 3, reps: '15', weight: '—', rest: '30s', tip: 'Descente 3s · jambes quasi-tendues · pas de balancement', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme Z2 modéré · poignets · pas les bras · rester souple', star: false, isFinisher: true },
+      ]
+    },
+    legs: {
+      exercises: [
+        { section: '— QUADRICEPS —', sectionColor: '#a855f7' },
+        { name: 'Squat barre', sets: 4, reps: '10', weight: 'RPE 7', rest: '90s', tip: 'Largeur épaules · descente 2s · genoux dans l\'axe des orteils', star: false },
+        { name: 'Leg press machine', sets: 3, reps: '12', weight: 'RPE 7', rest: '75s', tip: 'Pieds hauts · amplitude max · genoux pas en hyperextension', star: false },
+        { section: '— CHAÎNE POSTÉRIEURE —', sectionColor: '#a855f7' },
+        { name: 'Romanian Deadlift barre', sets: 4, reps: '10', weight: 'RPE 7', rest: '90s', tip: 'Barre près du corps · dos neutre · étirement ischio max · pause basse', star: false },
+        { name: 'Hip thrust barre banc', sets: 3, reps: '12', weight: 'RPE 6', rest: '75s', tip: 'Contraction fessiers 2s en haut · bassin en rétroversion · menton rentré', star: false },
+        { section: '— FENTES —', sectionColor: '#a855f7' },
+        { name: 'Fentes marchées haltères', sets: 2, reps: '10/jambe', weight: 'léger', rest: '60s', tip: 'Grand pas · genou arrière proche du sol · torse droit', star: false },
+        { section: '— ABDOS : CORE DYN. + ROTATION —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Mountain climbers', sets: 3, reps: '30s', weight: '—', rest: '30s', tip: 'Genoux vers la poitrine · dos plat · pas de rebond des hanches', star: false, isAbdos: true },
+        { name: 'Wood chop câble ★', sets: 3, reps: '12/côté', weight: 'léger', rest: '30s', tip: 'Rotation du tronc · bras quasi tendus · gainage pendant tout le mouvement', star: true, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme Z2 · après legs c\'est éprouvant → accepte le rythme plus lent', star: false, isFinisher: true },
+      ]
+    }
+  },
+  s3s5: {
+    push: {
+      exercises: [
+        { section: '— PECTORAUX HAUT + MÉDIAN 🎯 —', sectionColor: '#f97316' },
+        { name: 'Développé incliné 30° haltères', sets: 4, reps: '10', weight: '2×20kg', rest: '75s', tip: 'Tempo 3-0-1 · 3s descente · sensation d\'étirement pecto', star: false },
+        { name: 'Câbles croisés bas→haut ★', sets: 3, reps: '12', weight: '+2kg vs S1', rest: '60s', tip: 'Croiser et tenir 1s · RPE 8 · concentre-toi sur le pecto pas les bras', star: true },
+        { name: 'Squeeze Press haltères', sets: 3, reps: '12', weight: '2×20kg', rest: '60s', tip: 'Tempo 3-0-1 · presser fort tout le long', star: false },
+        { section: '— ÉPAULES —', sectionColor: '#f97316' },
+        { name: 'Arnold Press haltères', sets: 3, reps: '10', weight: '2×12kg', rest: '75s', tip: 'Rotation complète · pas de claquage épaule · contrôlé', star: false },
+        { name: 'Élévations latérales câble', sets: 3, reps: '15', weight: '+1kg vs S1', rest: '45s', tip: 'Pause 1s en haut · RPE 7 · tension constante câble', star: false },
+        { section: '— TRICEPS 💪 —', sectionColor: '#f97316' },
+        { name: 'Extension triceps poulie haute', sets: 3, reps: '12', weight: '25kg', rest: '60s', tip: 'RPE 8 · extension totale · contraction dure', star: false },
+        { name: 'Dips lestés (ceinture) ★', sets: 3, reps: '8', weight: '+5kg', rest: '90s', tip: 'Penché avant · descente 3s · amplitude complète', star: true },
+        { section: '— ABDOS : DROITS + PROFOND —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Crunch câble genoux', sets: 3, reps: '20', weight: '+2kg', rest: '30s', tip: 'Même qualité · plus lourd · contraction plus dure', star: false, isAbdos: true },
+        { name: 'Gainage RKC', sets: 3, reps: '25s', weight: '—', rest: '30s', tip: '+5s vs phase 1 · qualité > durée', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme élevé soutenu · maintiens la cadence', star: false, isFinisher: true },
+      ]
+    },
+    pull: {
+      exercises: [
+        { section: '— DOS V-SHAPE —', sectionColor: '#3b82f6' },
+        { name: 'Tirage vertical prise large', sets: 4, reps: '10', weight: '+5kg vs S1', rest: '75s', tip: 'Tempo 3-0-1 · squeeze en bas 1s · RPE 8', star: false },
+        { name: 'Rowing haltère 1 bras', sets: 3, reps: '10', weight: '22kg', rest: '75s', tip: 'Plus lourd → vigilance sur le dos plat', star: false },
+        { section: '— ÉPAULE ARRIÈRE —', sectionColor: '#3b82f6' },
+        { name: 'Face pull câble', sets: 3, reps: '15', weight: '+2kg', rest: '45s', tip: 'Rotation externe complète en fin · RPE 7', star: false },
+        { section: '— BICEPS VOLUME 💪 —', sectionColor: '#3b82f6' },
+        { name: 'Curl haltères alterné', sets: 4, reps: '10', weight: '2×11kg', rest: '60s', tip: 'Supination forcée · tempo 3-0-1 · RPE 8', star: false },
+        { name: 'Curl concentré haltère ★', sets: 3, reps: '12', weight: '+1kg', rest: '45s', tip: 'Focus total sur le pic · visualise le biceps · contraction 1s', star: true },
+        { name: 'Curl marteau câble', sets: 3, reps: '12', weight: '+2kg', rest: '45s', tip: 'Brachialis = épaisseur du bras de côté · indispensable', star: false },
+        { section: '— ABDOS : OBLIQUES + BAS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Planche latérale', sets: 2, reps: '45s/côté', weight: '—', rest: '30s', tip: '+10s vs phase 1 · hanches hautes', star: false, isAbdos: true },
+        { name: 'Relevés de jambes suspendus', sets: 3, reps: '15', weight: '—', rest: '30s', tip: 'Pause 1s en haut · descente 3s', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme élevé · pousse ta limite de confort', star: false, isFinisher: true },
+      ]
+    },
+    legs: {
+      exercises: [
+        { section: '— QUADRICEPS —', sectionColor: '#a855f7' },
+        { name: 'Squat barre', sets: 4, reps: '10', weight: '+5kg vs S1', rest: '90s', tip: 'Tempo 3-0-1 · descente profonde · RPE 8', star: false },
+        { name: 'Leg press machine', sets: 3, reps: '12', weight: '+10kg vs S1', rest: '75s', tip: 'Pieds hauts pour les ischio · amplitude max', star: false },
+        { section: '— CHAÎNE POSTÉRIEURE —', sectionColor: '#a855f7' },
+        { name: 'Romanian Deadlift barre', sets: 4, reps: '10', weight: '+5kg vs S1', rest: '90s', tip: 'Grande amplitude · étirement max · RPE 8', star: false },
+        { name: 'Hip thrust barre banc', sets: 3, reps: '12', weight: '+5kg vs S1', rest: '75s', tip: 'Contraction 2s · RPE 7', star: false },
+        { section: '— FENTES —', sectionColor: '#a855f7' },
+        { name: 'Fentes marchées haltères', sets: 2, reps: '10/jambe', weight: '+2kg vs S1', rest: '60s', tip: 'Progressif · stabilité avant volume', star: false },
+        { section: '— ABDOS : CORE DYN. + ROTATION —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Mountain climbers', sets: 3, reps: '35s', weight: '—', rest: '30s', tip: '+5s · rythme légèrement plus soutenu', star: false, isAbdos: true },
+        { name: 'Wood chop câble ★', sets: 3, reps: '12/côté', weight: '+2kg', rest: '30s', tip: 'RPE 7 · rotation ample · gainage dur', star: true, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme élevé · tiens les 10min coûte que coûte', star: false, isFinisher: true },
+      ]
+    }
+  },
+  s6s9: {
+    push: {
+      exercises: [
+        { section: '— PECTORAUX HAUT + MÉDIAN 🎯 —', sectionColor: '#f97316' },
+        { name: 'Développé incliné 30° haltères', sets: 4, reps: '8', weight: '2×22kg', rest: '75s', tip: 'Tempo 3-1-1 · pause 1s en bas · RPE 9 · dernier set à l\'échec -1', star: false },
+        { name: 'Câbles croisés bas→haut ★', sets: 3, reps: '12', weight: '+4kg vs S1', rest: '60s', tip: 'Tenir 2s en haut · isométrique 5s sur la dernière série', star: true },
+        { name: 'Squeeze Press haltères', sets: 4, reps: '10', weight: '2×22kg', rest: '60s', tip: 'Tempo 3-0-1 · 4 séries · intensité max', star: false },
+        { section: '— ÉPAULES —', sectionColor: '#f97316' },
+        { name: 'Arnold Press haltères', sets: 3, reps: '8', weight: '2×14–16kg', rest: '75s', tip: 'RPE 9 · amplitude totale · contrôle total', star: false },
+        { name: 'Élévations latérales câble', sets: 3, reps: '15+5 partielles', weight: '+2kg vs S1', rest: '45s', tip: '15 complètes + 5 partielles hautes = brûlure garantie', star: false },
+        { section: '— TRICEPS 💪 —', sectionColor: '#f97316' },
+        { name: 'Extension triceps poulie haute', sets: 3, reps: '12 + drop set', weight: '27kg → allège', rest: '60s', tip: '12 reps à 27kg · puis enlève 30% · continue jusqu\'à l\'échec', star: false },
+        { name: 'Dips lestés (ceinture) ★', sets: 4, reps: '8', weight: '+10kg', rest: '90s', tip: 'Tempo 3-1-1 · pause 1s en bas · 4 séries · RPE 9', star: true },
+        { section: '— ABDOS : DROITS + PROFOND —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Crunch câble genoux', sets: 3, reps: '20 + 5 partielles', weight: '+4kg vs S1', rest: '30s', tip: '20 complètes + 5 partielles basses · brûlure totale', star: false, isAbdos: true },
+        { name: 'Gainage RKC', sets: 4, reps: '30s', weight: '—', rest: '30s', tip: '4 séries · contraction absolue · respiration courte', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme max contrôlé · poussé toi à la limite · respiration nasale', star: false, isFinisher: true },
+      ]
+    },
+    pull: {
+      exercises: [
+        { section: '— DOS V-SHAPE —', sectionColor: '#3b82f6' },
+        { name: 'Tirage vertical prise large', sets: 4, reps: '8', weight: '+10kg vs S1', rest: '75s', tip: 'Tempo 3-1-1 · squeeze omoplate 1s en bas · RPE 9', star: false },
+        { name: 'Rowing haltère 1 bras', sets: 4, reps: '10', weight: '24kg', rest: '75s', tip: 'Tempo 2-1-2 · contraction haute 1s · 4 séries', star: false },
+        { section: '— ÉPAULE ARRIÈRE —', sectionColor: '#3b82f6' },
+        { name: 'Face pull câble', sets: 3, reps: '15', weight: '+4kg vs S1', rest: '45s', tip: 'Rotation externe complète · RPE 8', star: false },
+        { section: '— BICEPS VOLUME 💪 —', sectionColor: '#3b82f6' },
+        { name: 'Curl haltères alterné', sets: 4, reps: '10', weight: '2×14kg', rest: '60s', tip: 'Supination forcée · tempo 3-1-1 · RPE 9', star: false },
+        { name: 'Curl concentré haltère ★', sets: 3, reps: '12', weight: '+2kg vs S1', rest: '45s', tip: 'Torsion poignet en haut · contraction 1s · pic max', star: true },
+        { name: 'Curl marteau câble', sets: 3, reps: '12', weight: '+4kg vs S1', rest: '45s', tip: 'Contraction haute · épaisseur bras · RPE 8', star: false },
+        { section: '— ABDOS : OBLIQUES + BAS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Planche latérale', sets: 3, reps: '45s + rotation', weight: '—', rest: '30s', tip: '45s + 5 rotations hanches · 3 séries · intensité max', star: false, isAbdos: true },
+        { name: 'Relevés de jambes suspendus', sets: 4, reps: '15', weight: '—', rest: '30s', tip: 'Descente 4s · pause haute 1s · 4 séries · brûlure bas ventre', star: false, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme max · tu es en phase 3 · donne tout', star: false, isFinisher: true },
+      ]
+    },
+    legs: {
+      exercises: [
+        { section: '— QUADRICEPS —', sectionColor: '#a855f7' },
+        { name: 'Squat barre', sets: 4, reps: '8', weight: '+10kg vs S1', rest: '90s', tip: 'Tempo 3-1-1 · pause 2s bas · RPE 9 · focus technique', star: false },
+        { name: 'Leg press machine', sets: 3, reps: '10 + 5 partielles', weight: '+20kg vs S1', rest: '75s', tip: '10 complètes + 5 partielles bas · brûlure quad totale', star: false },
+        { section: '— CHAÎNE POSTÉRIEURE —', sectionColor: '#a855f7' },
+        { name: 'Romanian Deadlift barre', sets: 4, reps: '10', weight: '+10kg vs S1', rest: '90s', tip: 'Étirement maximal · grande amplitude · RPE 9', star: false },
+        { name: 'Hip thrust barre banc', sets: 4, reps: '12', weight: '+10kg vs S1', rest: '75s', tip: 'Contraction 2s · 4 séries · bassin haut et stable', star: false },
+        { section: '— FENTES —', sectionColor: '#a855f7' },
+        { name: 'Fentes marchées haltères', sets: 3, reps: '10/jambe', weight: '+4kg vs S1', rest: '60s', tip: '3 séries en phase 3 · stabilité totale', star: false },
+        { section: '— ABDOS : CORE DYN. + ROTATION —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Mountain climbers', sets: 3, reps: '40s', weight: '—', rest: '30s', tip: 'Rythme rapide · après legs c\'est brutal · tiens', star: false, isAbdos: true },
+        { name: 'Wood chop câble ★', sets: 3, reps: '12/côté', weight: '+4kg vs S1', rest: '30s', tip: 'RPE 8 · rotation ample · gainage absolu · obliques brûlent', star: true, isAbdos: true },
+        { section: '— FINISHER —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Phase 3 · rythme max · c\'est la dernière ligne droite avant décharge', star: false, isFinisher: true },
+      ]
+    }
+  },
+  s10: {
+    push: {
+      exercises: [
+        { section: '— PECTORAUX — VOLUME −40% —', sectionColor: '#10b981' },
+        { name: 'Développé incliné 30° haltères', sets: 2, reps: '10', weight: '2×22kg', rest: '90s', tip: 'Charges identiques à S6–S9 · volume réduit · qualité totale', star: false },
+        { name: 'Squeeze Press haltères', sets: 2, reps: '12', weight: '2×20kg', rest: '90s', tip: 'Décharge : pas de fatigue accumulée · récupère', star: false },
+        { section: '— ÉPAULES — DÉCHARGE —', sectionColor: '#10b981' },
+        { name: 'Arnold Press haltères', sets: 2, reps: '10', weight: '2×12kg', rest: '90s', tip: 'Léger · entretien · pas d\'effort max', star: false },
+        { section: '— TRICEPS — DÉCHARGE —', sectionColor: '#10b981' },
+        { name: 'Extension triceps poulie haute', sets: 2, reps: '12', weight: '23kg', rest: '90s', tip: 'Pas de drop set · entretien du signal nerveux', star: false },
+        { section: '— ABDOS LÉGERS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Gainage RKC', sets: 2, reps: '20s', weight: '—', rest: '30s', tip: 'Maintien · pas d\'effort supplémentaire', star: false, isAbdos: true },
+        { name: 'Crunch câble genoux', sets: 2, reps: '15', weight: 'léger', rest: '30s', tip: 'Décharge · juste entretien', star: false, isAbdos: true },
+        { section: '— FINISHER RÉDUIT —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Rythme modéré · décharge · profite de la récup', star: false, isFinisher: true },
+      ]
+    },
+    pull: {
+      exercises: [
+        { section: '— DOS — VOLUME −40% —', sectionColor: '#10b981' },
+        { name: 'Tirage vertical prise large', sets: 2, reps: '10', weight: '+10kg vs S1', rest: '90s', tip: 'Charges maintenues · volume réduit · récup', star: false },
+        { name: 'Rowing haltère 1 bras', sets: 2, reps: '10', weight: '22kg', rest: '90s', tip: 'Technique parfaite · pas d\'effort max', star: false },
+        { section: '— BICEPS — DÉCHARGE —', sectionColor: '#10b981' },
+        { name: 'Curl haltères alterné', sets: 2, reps: '10', weight: '2×11kg', rest: '90s', tip: 'Entretien du signal · pas de fatigue', star: false },
+        { name: 'Curl concentré haltère', sets: 2, reps: '12', weight: 'léger', rest: '60s', tip: 'Décharge · sensation · pas d\'intensité', star: false },
+        { section: '— ABDOS LÉGERS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Planche latérale', sets: 2, reps: '30s/côté', weight: '—', rest: '30s', tip: 'Maintien · allégé vs phase 3', star: false, isAbdos: true },
+        { section: '— FINISHER RÉDUIT —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Modéré · récup active · profite', star: false, isFinisher: true },
+      ]
+    },
+    legs: {
+      exercises: [
+        { section: '— QUADRICEPS — VOLUME −40% —', sectionColor: '#10b981' },
+        { name: 'Squat barre', sets: 2, reps: '10', weight: '+8kg vs S1', rest: '90s', tip: 'Légèrement réduit · technique · pas d\'effort max', star: false },
+        { name: 'Leg press machine', sets: 2, reps: '12', weight: 'modéré', rest: '90s', tip: 'Décharge · entretien', star: false },
+        { section: '— CHAÎNE POST. — DÉCHARGE —', sectionColor: '#10b981' },
+        { name: 'Romanian Deadlift barre', sets: 2, reps: '10', weight: '+5kg vs S1', rest: '90s', tip: 'Volume réduit · charges maintenues · récup', star: false },
+        { name: 'Hip thrust barre banc', sets: 2, reps: '12', weight: 'modéré', rest: '90s', tip: 'Contraction qualitative · pas de surcharge', star: false },
+        { section: '— ABDOS LÉGERS —', sectionColor: '#10b981', isAbdos: true },
+        { name: 'Mountain climbers', sets: 2, reps: '25s', weight: '—', rest: '30s', tip: 'Modéré · rythme lent · décharge', star: false, isAbdos: true },
+        { section: '— FINISHER RÉDUIT —', sectionColor: '#eab308', isFinisher: true },
+        { name: '🪢 Corde à sauter continu', sets: 1, reps: '10 min', weight: '—', rest: '—', tip: 'Décharge · profite du calme avant le peak S11', star: false, isFinisher: true },
+      ]
+    }
+  }
+};
+
+const dayConfigs = {
+  push: { label: 'PUSH — LUNDI', sub: 'Pectoraux haut+médian · Épaules · Triceps · Abdos droits+profond', color: '#f97316', icon: '💪' },
+  pull: { label: 'PULL — MERCREDI', sub: 'Dos V-shape · Épaule arrière · Biceps volume · Abdos obliques+bas', color: '#3b82f6', icon: '🔙' },
+  legs: { label: 'LEGS — VENDREDI', sub: 'Quadriceps · Chaîne postérieure · Fentes · Abdos core dyn.+rotation', color: '#a855f7', icon: '🦵' }
+};
+
+function buildDay(phaseKey, dayKey) {
+  const cfg = dayConfigs[dayKey];
+  const exs = phases[phaseKey][dayKey].exercises;
+  let html = `<div class="day-detail-card">
+    <div class="day-detail-header" style="background:${cfg.color}10;border-bottom:1px solid ${cfg.color}25">
+      <span class="day-detail-icon">${cfg.icon}</span>
+      <div>
+        <div class="day-detail-title" style="color:${cfg.color}">${cfg.label}</div>
+        <div class="day-detail-sub">${cfg.sub}</div>
+      </div>
+    </div>
+    <div class="day-detail-body">
+      <div class="ex-header-row">
+        <div>EXERCICE</div><div>SÉRIES</div><div>REPS</div><div>CHARGE</div><div>REPOS</div><div>TECHNIQUE / FOCUS</div>
+      </div>`;
+
+  exs.forEach(ex => {
+    if (ex.section) {
+      html += `<div class="ex-section" style="background:${ex.isAbdos ? 'rgba(16,185,129,0.06)' : ex.isFinisher ? 'rgba(234,179,8,0.04)' : 'rgba(0,0,0,0.15)'}">
+        <div class="ex-section-label" style="color:${ex.sectionColor};padding:6px 0">${ex.section}</div>
+      </div>`;
+    } else {
+      const rowBg = ex.isAbdos ? 'rgba(16,185,129,0.03)' : ex.isFinisher ? 'rgba(234,179,8,0.03)' : '';
+      html += `<div class="ex-row" style="background:${rowBg}">
+        <div><span class="ex-name" style="${ex.isFinisher?'color:var(--yellow)':''}">${ex.name}</span></div>
+        <div><span class="ex-sets">${ex.sets}×</span></div>
+        <div><span class="ex-reps">${ex.reps}</span></div>
+        <div><span class="ex-weight">${ex.weight}</span></div>
+        <div><span class="ex-rest">${ex.rest||'—'}</span></div>
+        <div><span class="ex-tip">${ex.tip}</span></div>
+      </div>`;
+    }
+  });
+
+  html += `</div></div>`;
+  return html;
+}
+
+function buildPhase(phaseKey, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || container.dataset.built) return;
+  container.innerHTML = buildDay(phaseKey,'push') + buildDay(phaseKey,'pull') + buildDay(phaseKey,'legs');
+  container.dataset.built = '1';
+}
+
+// Build first phase on load
+buildPhase('s1s2', 'days-s1s2');
+
+// Override showPhase to lazy-build
+const originalShowPhase = showPhase;
+window.showPhase = function(phase, btn) {
+  ['s1s2','s3s5','s6s9','s10'].forEach(p => {
+    document.getElementById('phase-'+p).style.display = p === phase ? 'block' : 'none';
+  });
+  document.querySelectorAll('.phase-btn').forEach(b => {
+    b.style.background = 'rgba(30,32,40,0.8)';
+    b.style.borderColor = 'var(--border)';
+    b.style.color = 'var(--muted)';
+  });
+  const colors = { s1s2: ['rgba(59,130,246,0.15)','rgba(59,130,246,0.4)','#60a5fa'], s3s5: ['rgba(249,115,22,0.15)','rgba(249,115,22,0.4)','#f97316'], s6s9: ['rgba(239,68,68,0.15)','rgba(239,68,68,0.4)','#ef4444'], s10: ['rgba(16,185,129,0.15)','rgba(16,185,129,0.4)','#10b981'] };
+  const c = colors[phase];
+  btn.style.background = c[0]; btn.style.borderColor = c[1]; btn.style.color = c[2];
+  const map = { s1s2:'days-s1s2', s3s5:'days-s3s5', s6s9:'days-s6s9', s10:'days-s10' };
+  buildPhase(phase, map[phase]);
+};
+
+// WEEKS DATA
+const weeks = [
+  {
+    num: 1, dates: "16–22 mars", phase: 1, phaseLabel: "MISE EN PLACE",
+    poids: "86.4", poisdsObj: "−0.6kg",
+    muscu: ["PUSH : 3×10 · RPE 6 · repos 90s", "PULL : 3×10 · RPE 6", "LEGS : 3×12 · poids léger"],
+    cardio: ["Course Sam : 30min Z2 footing"],
+    natation: ["Mar + Dim : 1 000m technique", "Focus crawl + respiration"],
+    abdos: ["Gainage RKC 3×15s", "Relevés jambes 3×12"],
+    corde: ["3×10min après muscu"],
+    note: "Semaine de calibration. Évalue tes charges, ton souffle à la corde. Commence le suivi alimentaire."
+  },
+  {
+    num: 2, dates: "23–29 mars", phase: 1, phaseLabel: "MISE EN PLACE",
+    poids: "85.8", poisdsObj: "−0.6kg",
+    muscu: ["PUSH : 3×12 · légère augmentation charge", "PULL : 3×12 · contrôle tempo", "LEGS : 3×12 · bonne amplitude"],
+    cardio: ["Course Sam : 30min Z2 · légère accélération km 4–5"],
+    natation: ["Mar + Dim : 1 100m", "Travail coulée + tournade"],
+    abdos: ["Gainage 3×20s", "Relevés 3×15", "Bicycle 3×16"],
+    corde: ["3×10min · rythme confort"],
+    note: "Installe la routine. Ton corps s'adapte — la fatigue augmente en S2. C'est normal, tiens."
+  },
+  {
+    num: 3, dates: "30 mars–5 avr", phase: 2, phaseLabel: "MONTÉE EN CHARGE",
+    poids: "85.2", poisdsObj: "−0.6kg",
+    muscu: ["PUSH : 4×10 · +2kg sur incliné", "PULL : 4×10 · rowing plus lourd", "LEGS : 4×10 · squats plus chargés"],
+    cardio: ["Course Sam : 35min Z2 + 2×5min Z3"],
+    natation: ["Mar : 1 200m endurance", "Dim : 1 400m · 4×100m avec récup"],
+    abdos: ["Gainage 3×20s", "Relevés 3×15 tempo lent"],
+    corde: ["3×10min · rythme élevé"],
+    note: "Première vraie semaine d'intensité. Dors 8h. Le corps commence à réclamer plus de récupération."
+  },
+  {
+    num: 4, dates: "6–12 avril", phase: 2, phaseLabel: "MONTÉE EN CHARGE",
+    poids: "84.4", poisdsObj: "−0.8kg",
+    muscu: ["PUSH : 4×10 · RPE 7–8 · charges identiques", "PULL : 4×10 · focus contraction dorsale", "LEGS : 4×10 · RDL added"],
+    cardio: ["Course Sam : 35min Z2+Z3 comme S3"],
+    natation: ["Mar + Dim : 1 500m", "6×100m avec 20s récup"],
+    abdos: ["Gainage 3×20s", "Bicycle 3×20", "Planche lat 2×30s"],
+    corde: ["3×10min · rythme maintenu"],
+    note: "Semaine clé — tu devrais sentir ta masse musculaire se solidifier malgré le déficit. Bon signe."
+  },
+  {
+    num: 5, dates: "13–19 avril", phase: 2, phaseLabel: "MONTÉE EN CHARGE",
+    poids: "83.8", poisdsObj: "−0.6kg",
+    muscu: ["PUSH : 4×10 · +1–2kg si RPE ≤7", "PULL : 4×12 · volume +", "LEGS : 4×10–12 · fentes ajoutées"],
+    cardio: ["Course Sam : 40min Z2 progressif"],
+    natation: ["Mar : 1 600m", "Dim : 1 800m · 3×200m"],
+    abdos: ["Gainage 3×25s", "Mountain climbers 3×30s", "Relevés 3×15"],
+    corde: ["3×10min · rythme max soutenu"],
+    note: "Sommet de la phase 2. Évalue : es-tu à 83.8? Si oui, continue. Si stagnation → active le re-feed."
+  },
+  {
+    num: 6, dates: "20–26 avril", phase: 3, phaseLabel: "INTENSIFICATION",
+    poids: "83.1", poisdsObj: "−0.7kg",
+    muscu: ["PUSH : 4×8 · RPE 9 · pause 2s bas", "PULL : 4×8 · tempo 2-1-2", "LEGS : 4×10 · pause basse squat"],
+    cardio: ["Course Sam : 40min tempo run"],
+    natation: ["Mar + Dim : 2 000m", "8×100m prog · 15s récup"],
+    abdos: ["Gainage 4×25s", "Bicycle 3×24", "Relevés 4×15 tempo"],
+    corde: ["3×10min · rythme agressif"],
+    note: "Phase la plus dure. Réduction du temps de repos à 60–75s. La fatigue est une information, pas une limite."
+  },
+  {
+    num: 7, dates: "27 avr–3 mai", phase: 3, phaseLabel: "INTENSIFICATION",
+    poids: "82.4", poisdsObj: "−0.7kg",
+    muscu: ["PUSH : 4×8 · drop set last set", "PULL : 4×8 · superset curl + face pull", "LEGS : 4×10 + hip thrust 4×12"],
+    cardio: ["Course Sam : 45min tempo Z2→Z3"],
+    natation: ["Mar : 2 000m · Dim : 2 200m"],
+    abdos: ["Gainage 4×25s", "Mountain climbers 3×30s", "Planche lat 3×30s"],
+    corde: ["3×10min · rythme puissant"],
+    note: "Semaine critique pour le ventre. Maintiens les glucides du déjeuner élevés (80g riz) pour préserver la force."
+  },
+  {
+    num: 8, dates: "4–10 mai", phase: 3, phaseLabel: "INTENSIFICATION",
+    poids: "81.7", poisdsObj: "−0.7kg",
+    muscu: ["PUSH : 4×8 · RPE 9+ · 2s pause", "PULL : 4×8 · full ROM", "LEGS : 4×8–10 · poids maximum"],
+    cardio: ["Course Sam : 45min · 20min Z3 central"],
+    natation: ["Mar + Dim : 2 200m", "Sprint 4×50m en fin"],
+    abdos: ["Gainage 4×25s", "Relevés 4×15 slow", "Bicycle 3×24"],
+    corde: ["3×10min · continuité parfaite"],
+    note: "8 semaines dans le programme. Prends une photo et mesure le tour de taille. La différence devrait être visible."
+  },
+  {
+    num: 9, dates: "11–17 mai", phase: 3, phaseLabel: "INTENSIFICATION",
+    poids: "81.0", poisdsObj: "−0.7kg",
+    muscu: ["PUSH : 4×8 · meilleure séance de la période", "PULL : 4×8 · tout à fond", "LEGS : 4×8 · intensité maximale"],
+    cardio: ["Course Sam : 50min long run Z2"],
+    natation: ["Mar : 2 400m · Dim : 2 400m"],
+    abdos: ["Circuit abdos complet · 20min"],
+    corde: ["3×10min · session finale phase 3"],
+    note: "Dernière semaine intensive AVANT décharge. Donne tout. Dors 9h ce week-end — c'est un investissement."
+  },
+  {
+    num: 10, dates: "18–24 mai", phase: 4, phaseLabel: "DÉCHARGE",
+    poids: "80.5", poisdsObj: "−0.5kg",
+    muscu: ["PUSH : 2×10 · −40% volume · charges identiques", "PULL : 2×10 · léger", "LEGS : 2×10 · sans accessoires"],
+    cardio: ["Course Sam : 30min Z1 très léger"],
+    natation: ["Mar OU Dim (pas les 2) : 45min technique douce"],
+    abdos: ["Gainage 2×20s", "Relevés 2×12 · juste entretien"],
+    corde: ["1×10min seulement"],
+    note: "⚠️ DÉCHARGE OBLIGATOIRE. +200 kcal/jour de glucides. Ton corps va se recharger pour le peak final."
+  },
+  {
+    num: 11, dates: "25 mai–1 juin", phase: 5, phaseLabel: "PEAK / OBJECTIF",
+    poids: "80.0", poisdsObj: "TARGET!",
+    muscu: ["PUSH : 3×10 · charges phase 3 · bonne énergie garantie", "PULL : 3×10 · peak session", "LEGS : 3×10 · tu es à 80kg"],
+    cardio: ["Course Sam : 40min Z2 agréable"],
+    natation: ["Mar + Dim : 45min · nage plaisir"],
+    abdos: ["Session complète · 15min"],
+    corde: ["3×10min · célèbre chaque session"],
+    note: "🎯 80 KG. C'est ici. Tu arrives frais grâce à la décharge. Cette semaine prouve que le plan a fonctionné."
+  }
+];
+
+const phaseColors = { 1: '#3b82f6', 2: '#f97316', 3: '#ef4444', 4: '#10b981', 5: '#a855f7' };
+
+const grid = document.getElementById('weeksGrid');
+weeks.forEach(w => {
+  const color = phaseColors[w.phase];
+  const isTarget = w.poisdsObj === 'TARGET!';
+  const card = document.createElement('div');
+  card.className = 'week-card';
+  card.innerHTML = `
+    <div class="week-header" style="background:${color}18;border-bottom:1px solid ${color}30">
+      <div>
+        <div class="week-num" style="color:${color}">S${w.num < 10 ? '0'+w.num : w.num} — ${w.phaseLabel}</div>
+        <div class="week-dates">${w.dates}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="week-poids" style="color:${isTarget ? '#10b981' : color}">${w.poids} kg</div>
+        <div style="font-size:11px;color:${isTarget ? '#10b981' : 'var(--muted)'};font-family:'JetBrains Mono',monospace">${w.poisdsObj}</div>
+      </div>
+    </div>
+    <div class="week-body">
+      <div class="week-section-label">💪 MUSCU · PPL</div>
+      ${w.muscu.map(l => `<div class="week-line">${l}</div>`).join('')}
+      <div class="week-section-label">🏃 CARDIO</div>
+      ${w.cardio.map(l => `<div class="week-line">${l}</div>`).join('')}
+      <div class="week-section-label">🏊 NATATION</div>
+      ${w.natation.map(l => `<div class="week-line">${l}</div>`).join('')}
+      <div class="week-section-label">🔥 ABDOS + CORDE</div>
+      ${w.abdos.map(l => `<div class="week-line">${l}</div>`).join('')}
+      ${w.corde.map(l => `<div class="week-line">${l}</div>`).join('')}
+      <div class="week-note" style="border-left-color:${color}">
+        ${w.note}
+      </div>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+</script>
+
+<!-- ═══════════════════════════════════════════════ PAGE 5 ═══════════ -->
+<div class="page" id="page5">
+  <div style="margin-bottom:20px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div>
+      <h1 style="margin-bottom:6px">JOURNAL D'ENTRAÎNEMENT</h1>
+      <p style="color:var(--muted);font-size:13px">Clique sur un jour · Remplis tes données · Exporte pour partager avec Claude</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button onclick="importJSON()" style="background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.4);color:#60a5fa;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">⬆ IMPORTER JSON</button>
+      <button onclick="exportData()" style="background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);color:#f97316;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">⬇ EXPORTER JSON</button>
+      <button onclick="clearAll()" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">🗑 RESET</button>
+    </div>
+  </div>
+
+  <!-- BANNIÈRE INSTALL iOS -->
+  <div id="iosBanner" style="display:none;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:13px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <strong style="color:var(--accent)">📱 Installer comme app iPhone</strong><br>
+        <span style="color:var(--muted)">1. Appuie sur <strong style="color:var(--text)">⬆ Partager</strong> en bas de Safari<br>
+        2. Sélectionne <strong style="color:var(--text)">"Sur l'écran d'accueil"</strong><br>
+        3. L'app s'ouvre comme une vraie app, données sauvegardées automatiquement ✅</span>
+      </div>
+      <button onclick="document.getElementById('iosBanner').style.display='none'" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:0 0 0 12px">✕</button>
+    </div>
+  </div>
+  <script>
+  // Affiche la bannière si iOS Safari et pas encore installé
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone === true;
+  if (isIOS && !isStandalone) {
+    document.getElementById('iosBanner').style.display = 'block';
+  }
+  </script>
+
+  <!-- LÉGENDE -->
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#f97316"></div>PUSH</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#3b82f6"></div>PULL</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#a855f7"></div>LEGS</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#0ea5e9"></div>NATATION</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#eab308"></div>COURSE</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#374151"></div>REPOS</div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)"><div style="width:12px;height:12px;border-radius:3px;background:#10b981;position:relative"><div style="position:absolute;right:-2px;top:-2px;width:6px;height:6px;background:#10b981;border-radius:50%;border:1px solid #0a0a0a"></div></div>COMPLÉTÉ</div>
+  </div>
+
+  <!-- CALENDAR WEEKS -->
+  <div id="calendarContainer" style="display:flex;flex-direction:column;gap:4px;margin-bottom:28px"></div>
+
+  <!-- STATS BAR -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;display:flex;gap:20px;flex-wrap:wrap">
+    <div style="text-align:center"><div id="statTotal" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--accent)">0</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Séances log</div></div>
+    <div style="text-align:center"><div id="statMuscu" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#f97316">0</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Muscu</div></div>
+    <div style="text-align:center"><div id="statNat" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#0ea5e9">0</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Natation</div></div>
+    <div style="text-align:center"><div id="statRun" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:#eab308">0</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Course</div></div>
+    <div style="text-align:center"><div id="statPoids" style="font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--accent3)">—</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Dernier poids</div></div>
+    <div style="flex:1;min-width:200px">
+      <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">PROGRESSION 11 SEMAINES</div>
+      <div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden"><div id="progressBar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:4px;width:0%;transition:width 0.5s"></div></div>
+      <div id="progressLabel" style="font-size:10px;color:var(--muted);margin-top:4px">0 / 77 jours</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;backdrop-filter:blur(4px);overflow-y:auto">
+  <div style="max-width:580px;margin:40px auto;background:#161920;border:1px solid #242830;border-radius:14px;overflow:hidden">
+    <div id="modalHeader" style="padding:18px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #242830">
+      <div>
+        <div id="modalTitle" style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1.5px"></div>
+        <div id="modalDate" style="font-size:11px;color:#6b7280;font-family:'JetBrains Mono',monospace;margin-top:2px"></div>
+      </div>
+      <button onclick="closeModal()" style="background:rgba(255,255,255,0.06);border:1px solid #242830;color:#9ca3af;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:16px">✕</button>
+    </div>
+    <div style="padding:20px 22px">
+
+      <!-- WEIGHT -->
+      <div style="margin-bottom:16px">
+        <label style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#6b7280;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px">⚖️ POIDS DU JOUR (kg)</label>
+        <input id="inputPoids" type="number" step="0.1" placeholder="ex: 86.4" style="width:100%;background:#0f1117;border:1px solid #242830;border-radius:6px;padding:10px 12px;color:#e8eaf0;font-family:'JetBrains Mono',monospace;font-size:14px;outline:none">
+      </div>
+
+      <!-- FEELING -->
+      <div style="margin-bottom:16px">
+        <label style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#6b7280;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px">😤 RESSENTI / ÉNERGIE</label>
+        <div style="display:flex;gap:8px" id="feelingBtns">
+          <button onclick="selectFeeling(1)" class="feel-btn" data-val="1" style="flex:1;padding:8px;border-radius:6px;border:1px solid #242830;background:#0f1117;cursor:pointer;font-size:16px" title="Mauvais">😴</button>
+          <button onclick="selectFeeling(2)" class="feel-btn" data-val="2" style="flex:1;padding:8px;border-radius:6px;border:1px solid #242830;background:#0f1117;cursor:pointer;font-size:16px" title="Moyen">😐</button>
+          <button onclick="selectFeeling(3)" class="feel-btn" data-val="3" style="flex:1;padding:8px;border-radius:6px;border:1px solid #242830;background:#0f1117;cursor:pointer;font-size:16px" title="Bien">🙂</button>
+          <button onclick="selectFeeling(4)" class="feel-btn" data-val="4" style="flex:1;padding:8px;border-radius:6px;border:1px solid #242830;background:#0f1117;cursor:pointer;font-size:16px" title="Très bien">😁</button>
+          <button onclick="selectFeeling(5)" class="feel-btn" data-val="5" style="flex:1;padding:8px;border-radius:6px;border:1px solid #242830;background:#0f1117;cursor:pointer;font-size:16px" title="Excellent">🔥</button>
+        </div>
+      </div>
+
+      <!-- TYPE-SPECIFIC FIELDS -->
+      <div id="typeFields"></div>
+
+      <!-- NOTES LIBRES -->
+      <div style="margin-bottom:16px">
+        <label style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#6b7280;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px">📝 NOTES LIBRES (charges, observations, douleurs...)</label>
+        <textarea id="inputNotes" rows="5" placeholder="Ex: Incliné 2×20kg 4×10 ✓ · Arnold passé à 12kg · sensation pecto médian sur câbles · léger inconfort épaule gauche..." style="width:100%;background:#0f1117;border:1px solid #242830;border-radius:6px;padding:10px 12px;color:#e8eaf0;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:vertical;line-height:1.6"></textarea>
+      </div>
+
+      <!-- SOMMEIL -->
+      <div style="margin-bottom:20px">
+        <label style="font-size:11px;font-family:'JetBrains Mono',monospace;color:#6b7280;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px">😴 SOMMEIL (heures)</label>
+        <input id="inputSommeil" type="number" step="0.5" min="4" max="12" placeholder="ex: 7.5" style="width:100%;background:#0f1117;border:1px solid #242830;border-radius:6px;padding:10px 12px;color:#e8eaf0;font-family:'JetBrains Mono',monospace;font-size:14px;outline:none">
+      </div>
+
+      <div style="display:flex;gap:10px">
+        <button onclick="saveEntry()" style="flex:1;background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.5);color:#f97316;border-radius:8px;padding:12px;cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px">✓ SAUVEGARDER</button>
+        <button onclick="deleteEntry()" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;border-radius:8px;padding:12px 16px;cursor:pointer;font-size:14px">🗑</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.cal-week { display:grid; grid-template-columns:80px repeat(7,1fr); gap:4px; align-items:center; }
+.cal-week-label { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); text-align:right; padding-right:10px; line-height:1.3; }
+.cal-day {
+  border-radius:8px; padding:8px 6px; cursor:pointer;
+  border:1px solid var(--border); background:var(--card);
+  transition:all 0.15s; text-align:center; position:relative;
+  min-height:62px; display:flex; flex-direction:column; justify-content:center; align-items:center;
+}
+.cal-day:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,0.4); }
+.cal-day.rest { opacity:0.4; cursor:default; }
+.cal-day.rest:hover { transform:none; box-shadow:none; }
+.cal-day .cd-name { font-family:'JetBrains Mono',monospace; font-size:9px; color:rgba(255,255,255,0.4); font-weight:700; text-transform:uppercase; margin-bottom:3px; }
+.cal-day .cd-date { font-family:'Bebas Neue',sans-serif; font-size:18px; line-height:1; margin-bottom:3px; }
+.cal-day .cd-type { font-size:10px; font-weight:600; }
+.cal-day .cd-done { position:absolute; top:4px; right:4px; width:8px; height:8px; border-radius:50%; background:#10b981; }
+.cal-day .cd-poids { font-size:9px; font-family:'JetBrains Mono',monospace; color:#10b981; margin-top:2px; }
+.cal-header { display:grid; grid-template-columns:80px repeat(7,1fr); gap:4px; margin-bottom:4px; }
+.cal-header > div { text-align:center; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); font-weight:700; text-transform:uppercase; padding:4px 0; }
+.feel-btn.selected { border-color:var(--accent)!important; background:rgba(249,115,22,0.15)!important; }
+.type-field-group { margin-bottom:14px; }
+.type-field-group label { font-size:11px;font-family:'JetBrains Mono',monospace;color:#6b7280;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px; }
+.type-field-group input { width:100%;background:#0f1117;border:1px solid #242830;border-radius:6px;padding:9px 12px;color:#e8eaf0;font-family:'JetBrains Mono',monospace;font-size:13px;outline:none; }
+.type-field-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+</style>
+
+<script>
+// ═══ CALENDAR DATA ═══
+const START = new Date(2026, 2, 16); // 16 mars 2026
+const END   = new Date(2026, 5, 1);  // 1er juin 2026
+
+// Programme type par jour de semaine (0=dim, 1=lun, 2=mar...)
+// Semaine type : LUN=PUSH, MAR=NAT, MER=PULL, JEU=REST, VEN=LEGS, SAM=COURSE, DIM=NAT
+const dayTypeMap = {1:'push', 2:'swim', 3:'pull', 4:'rest', 5:'legs', 6:'run', 0:'swim'};
+const dayTypeLabels = { push:'PUSH', pull:'PULL', legs:'LEGS', swim:'NATATION', run:'COURSE', rest:'REPOS' };
+const dayTypeColors = { push:'#f97316', pull:'#3b82f6', legs:'#a855f7', swim:'#0ea5e9', run:'#eab308', rest:'#374151' };
+const dayTypeIcons  = { push:'💪', pull:'🔙', legs:'🦵', swim:'🏊', run:'🏃', rest:'—' };
+
+const WEEKS_META = [
+  { num:1, label:'S01 · Mise en place', phase:'s1s2' },
+  { num:2, label:'S02 · Mise en place', phase:'s1s2' },
+  { num:3, label:'S03 · Montée', phase:'s3s5' },
+  { num:4, label:'S04 · Montée', phase:'s3s5' },
+  { num:5, label:'S05 · Montée', phase:'s3s5' },
+  { num:6, label:'S06 · Intensif', phase:'s6s9' },
+  { num:7, label:'S07 · Intensif', phase:'s6s9' },
+  { num:8, label:'S08 · Intensif', phase:'s6s9' },
+  { num:9, label:'S09 · Intensif', phase:'s6s9' },
+  { num:10, label:'S10 · Décharge', phase:'s10' },
+  { num:11, label:'S11 · PEAK 🎯', phase:'s11' },
+];
+
+// STORAGE — localStorage persistant
+const LS_KEY = 'tomy11w_journal';
+let journal = {};
+
+function loadJournal() {
+  try { journal = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch(e) { journal = {}; }
+}
+function saveJournal() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(journal)); } catch(e) {}
+}
+let currentDayKey = null;
+let currentFeeling = null;
+
+function dateKey(d) {
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function buildCalendar() {
+  loadJournal();
+  const container = document.getElementById('calendarContainer');
+
+  // Header
+  const hdr = document.createElement('div');
+  hdr.className = 'cal-header';
+  hdr.innerHTML = '<div></div>' + ['LUN','MAR','MER','JEU','VEN','SAM','DIM'].map(d=>`<div>${d}</div>`).join('');
+  container.appendChild(hdr);
+
+  // Generate weeks
+  let cur = new Date(START);
+  // Align to Monday
+  const dow = cur.getDay(); // 0=sun
+  const diff = dow === 0 ? -6 : 1 - dow;
+  cur.setDate(cur.getDate() + diff);
+
+  WEEKS_META.forEach((wm, wi) => {
+    const row = document.createElement('div');
+    row.className = 'cal-week';
+    const lbl = document.createElement('div');
+    lbl.className = 'cal-week-label';
+    lbl.innerHTML = wm.label.replace(' · ', '<br>');
+    row.appendChild(lbl);
+
+    for (let d = 0; d < 7; d++) {
+      const date = new Date(cur);
+      const dow2 = date.getDay(); // 0=sun,1=mon...
+      const key = dateKey(date);
+      const inRange = date >= START && date <= END;
+      const type = dayTypeMap[dow2];
+      const isRest = type === 'rest';
+      const color = dayTypeColors[type];
+
+      const cell = document.createElement('div');
+      cell.className = 'cal-day' + (isRest ? ' rest' : '');
+      cell.style.borderColor = inRange ? color + '40' : 'var(--border)';
+      cell.style.background = inRange ? color + '12' : 'rgba(0,0,0,0.1)';
+      cell.style.opacity = inRange ? '' : '0.2';
+
+      const entry = journal[key];
+      const hasEntry = entry && (entry.notes || entry.poids || entry.feeling);
+
+      cell.innerHTML = `
+        ${hasEntry ? '<div class="cd-done"></div>' : ''}
+        <div class="cd-name">${['DIM','LUN','MAR','MER','JEU','VEN','SAM'][dow2]}</div>
+        <div class="cd-date" style="color:${inRange ? color : 'var(--muted)'}">${date.getDate()}</div>
+        <div class="cd-type" style="color:${inRange ? color : 'var(--muted)'}">${inRange ? (dayTypeIcons[type]+' '+dayTypeLabels[type]) : ''}</div>
+        ${entry && entry.poids ? `<div class="cd-poids">${entry.poids}kg</div>` : ''}
+      `;
+
+      if (inRange && !isRest) {
+        cell.onclick = () => openModal(key, date, type);
+      }
+
+      row.appendChild(cell);
+      cur.setDate(cur.getDate() + 1);
+    }
+    container.appendChild(row);
+  });
+
+  updateStats();
+}
+
+function openModal(key, date, type) {
+  currentDayKey = key;
+  currentFeeling = null;
+
+  const entry = journal[key] || {};
+  const dayNames = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+  const monthNames = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+
+  document.getElementById('modalTitle').textContent = dayTypeIcons[type] + ' ' + dayTypeLabels[type];
+  document.getElementById('modalTitle').style.color = dayTypeColors[type];
+  document.getElementById('modalDate').textContent = `${dayNames[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]} 2026`;
+  document.getElementById('modalHeader').style.background = dayTypeColors[type] + '12';
+
+  document.getElementById('inputPoids').value = entry.poids || '';
+  document.getElementById('inputNotes').value = entry.notes || '';
+  document.getElementById('inputSommeil').value = entry.sommeil || '';
+
+  // Feeling
+  document.querySelectorAll('.feel-btn').forEach(b => b.classList.remove('selected'));
+  if (entry.feeling) {
+    currentFeeling = entry.feeling;
+    document.querySelector(`.feel-btn[data-val="${entry.feeling}"]`)?.classList.add('selected');
+  }
+
+  // Type-specific fields
+  const tf = document.getElementById('typeFields');
+  if (type === 'run') {
+    tf.innerHTML = `
+      <div class="type-field-grid" style="margin-bottom:14px">
+        <div class="type-field-group"><label>🏃 DISTANCE (km)</label><input id="tf_dist" type="number" step="0.01" placeholder="ex: 5.01" value="${entry.dist||''}"></div>
+        <div class="type-field-group"><label>⏱ TEMPS (min)</label><input id="tf_time" type="number" step="0.1" placeholder="ex: 29.1" value="${entry.time||''}"></div>
+        <div class="type-field-group"><label>📐 ALLURE (min/km)</label><input id="tf_pace" type="text" placeholder="ex: 5:47" value="${entry.pace||''}"></div>
+        <div class="type-field-group"><label>❤️ FC MOY (bpm)</label><input id="tf_hr" type="number" placeholder="ex: 148" value="${entry.hr||''}"></div>
+      </div>`;
+  } else if (type === 'swim') {
+    tf.innerHTML = `
+      <div class="type-field-grid" style="margin-bottom:14px">
+        <div class="type-field-group"><label>🏊 DISTANCE (m)</label><input id="tf_dist" type="number" step="50" placeholder="ex: 1200" value="${entry.dist||''}"></div>
+        <div class="type-field-group"><label>⏱ DURÉE (min)</label><input id="tf_time" type="number" step="1" placeholder="ex: 45" value="${entry.time||''}"></div>
+        <div class="type-field-group"><label>🔁 NB LONGUEURS</label><input id="tf_laps" type="number" placeholder="ex: 48" value="${entry.laps||''}"></div>
+        <div class="type-field-group"><label>💪 STYLE PRINCIPAL</label><input id="tf_style" type="text" placeholder="ex: crawl" value="${entry.style||''}"></div>
+      </div>`;
+  } else if (type === 'push' || type === 'pull' || type === 'legs') {
+    const typeLabel = {'push':'PUSH','pull':'PULL','legs':'LEGS'}[type];
+    tf.innerHTML = `
+      <div style="margin-bottom:14px">
+        <div class="type-field-group"><label>⏱ DURÉE SÉANCE (min)</label><input id="tf_dur" type="number" placeholder="ex: 47" value="${entry.dur||''}"></div>
+        <div class="type-field-group" style="margin-top:10px"><label>🪢 CORDE (complété ?)</label>
+          <div style="display:flex;gap:8px;margin-top:4px">
+            <button onclick="this.classList.toggle('selected');document.getElementById('tf_corde').value=this.classList.contains('selected')?'oui':'non'" id="cordeBtn" style="flex:1;padding:8px;border-radius:6px;border:1px solid ${entry.corde==='oui'?'rgba(249,115,22,0.5)':'#242830'};background:${entry.corde==='oui'?'rgba(249,115,22,0.15)':'#0f1117'};cursor:pointer;font-size:12px;color:${entry.corde==='oui'?'#f97316':'var(--muted)'}">🪢 10min COMPLÉTÉES</button>
+            <input id="tf_corde" type="hidden" value="${entry.corde||''}">
+          </div>
+        </div>
+      </div>`;
+    if (entry.corde === 'oui') {
+      setTimeout(() => document.getElementById('cordeBtn')?.classList.add('selected'), 50);
+    }
+  }
+
+  document.getElementById('modal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+  document.body.style.overflow = '';
+  currentDayKey = null;
+}
+
+function selectFeeling(val) {
+  currentFeeling = val;
+  document.querySelectorAll('.feel-btn').forEach(b => b.classList.remove('selected'));
+  document.querySelector(`.feel-btn[data-val="${val}"]`)?.classList.add('selected');
+}
+
+function saveEntry() {
+  if (!currentDayKey) return;
+  const entry = {
+    poids: document.getElementById('inputPoids').value,
+    notes: document.getElementById('inputNotes').value,
+    sommeil: document.getElementById('inputSommeil').value,
+    feeling: currentFeeling,
+    savedAt: new Date().toISOString(),
+  };
+  // Type-specific
+  ['dist','time','pace','hr','laps','style','dur','corde'].forEach(f => {
+    const el = document.getElementById('tf_'+f);
+    if (el) entry[f] = el.value;
+  });
+  // Clean empty
+  Object.keys(entry).forEach(k => { if (entry[k] === '' || entry[k] === null) delete entry[k]; });
+  journal[currentDayKey] = entry;
+  saveJournal();
+  closeModal();
+  rebuildCalendar();
+}
+
+function deleteEntry() {
+  if (!currentDayKey) return;
+  delete journal[currentDayKey];
+  saveJournal();
+  closeModal();
+  rebuildCalendar();
+}
+
+function rebuildCalendar() {
+  const c = document.getElementById('calendarContainer');
+  c.innerHTML = '';
+  buildCalendar();
+}
+
+function updateStats() {
+  let total = 0, muscu = 0, nat = 0, run = 0, lastPoids = null;
+  Object.entries(journal).forEach(([k, v]) => {
+    if (!v || (!v.notes && !v.poids && !v.feeling)) return;
+    total++;
+    const d = new Date(k);
+    const type = dayTypeMap[d.getDay()];
+    if (['push','pull','legs'].includes(type)) muscu++;
+    if (type === 'swim') nat++;
+    if (type === 'run') run++;
+    if (v.poids) lastPoids = v.poids;
+  });
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('statMuscu').textContent = muscu;
+  document.getElementById('statNat').textContent = nat;
+  document.getElementById('statRun').textContent = run;
+  document.getElementById('statPoids').textContent = lastPoids ? lastPoids+'kg' : '—';
+
+  const today = new Date();
+  const daysPassed = Math.max(0, Math.min(77, Math.floor((today - START) / 86400000)));
+  const pct = Math.round(daysPassed / 77 * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `${daysPassed} / 77 jours (${pct}%)`;
+}
+
+function exportData() {
+  const output = {
+    exportDate: new Date().toISOString(),
+    programme: 'TOMY — 87→80kg — 16 mars → 1er juin 2026',
+    totalEntries: Object.keys(journal).length,
+    journal: {}
+  };
+  // Enrich with day type
+  Object.entries(journal).forEach(([k, v]) => {
+    const d = new Date(k);
+    const type = dayTypeMap[d.getDay()];
+    output.journal[k] = { type: dayTypeLabels[type], ...v };
+  });
+  const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `tomy_journal_${dateKey(new Date())}.json`;
+  a.click();
+}
+
+function clearAll() {
+  if (!confirm('Effacer toutes les entrées du journal ?')) return;
+  journal = {};
+  saveJournal();
+  rebuildCalendar();
+}
+
+function importJSON() {
+  const input = document.createElement('input');
+  input.type = 'file'; input.accept = '.json';
+  input.onchange = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        const entries = data.journal || data;
+        // Strip type key if present
+        Object.entries(entries).forEach(([k,v]) => {
+          if (v && typeof v === 'object') { const {type,...rest} = v; journal[k] = rest; }
+        });
+        saveJournal();
+        rebuildCalendar();
+        alert('✅ ' + Object.keys(entries).length + ' entrées importées !');
+      } catch(err) { alert('❌ Fichier JSON invalide'); }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+// Close modal on backdrop click
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Init calendar when page 5 first shown — handled by global showPage
+</script>
+</body>
+</html>

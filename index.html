@@ -1853,8 +1853,9 @@ weeks.forEach(w => {
       <p style="color:var(--muted);font-size:13px">Clique sur un jour · Remplis tes données · Exporte pour partager avec Claude</p>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button id="ghPushBtn" onclick="pushToGitHub()" style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);color:#10b981;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">☁️ SAUVEGARDER GITHUB</button>
       <button onclick="importJSON()" style="background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.4);color:#60a5fa;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">⬆ IMPORTER JSON</button>
-      <button onclick="exportData()" style="background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);color:#f97316;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">⬇ EXPORTER JSON</button>
+      <button onclick="exportData()" style="background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);color:#f97316;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">⬇ LOCAL JSON</button>
       <button onclick="clearAll()" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;border-radius:6px;padding:9px 18px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">🗑 RESET</button>
     </div>
   </div>
@@ -2231,24 +2232,105 @@ function updateStats() {
   document.getElementById('progressLabel').textContent = `${daysPassed} / 77 jours (${pct}%)`;
 }
 
-function exportData() {
+function buildExportPayload() {
   const output = {
     exportDate: new Date().toISOString(),
     programme: 'TOMY — 87→80kg — 16 mars → 1er juin 2026',
     totalEntries: Object.keys(journal).length,
     journal: {}
   };
-  // Enrich with day type
   Object.entries(journal).forEach(([k, v]) => {
     const d = new Date(k);
     const type = dayTypeMap[d.getDay()];
     output.journal[k] = { type: dayTypeLabels[type], ...v };
   });
+  return output;
+}
+
+function exportData() {
+  const output = buildExportPayload();
   const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = `tomy_journal_${dateKey(new Date())}.json`;
   a.click();
+}
+
+async function pushToGitHub() {
+  const GH_OWNER  = 'DreamMaker184521';
+  const GH_REPO   = 'sport-2026';
+  const GH_FILE   = 'journal.json';
+  const API       = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+
+  // Get token from localStorage — never in source code
+  let GH_TOKEN = localStorage.getItem('gh_token');
+  if (!GH_TOKEN) {
+    GH_TOKEN = prompt('🔑 Entre ton GitHub Personal Access Token (stocké localement, jamais partagé) :');
+    if (!GH_TOKEN || !GH_TOKEN.startsWith('ghp_')) {
+      alert('❌ Token invalide. Il doit commencer par ghp_'); return;
+    }
+    localStorage.setItem('gh_token', GH_TOKEN.trim());
+  }
+
+  const btn = document.getElementById('ghPushBtn');
+  btn.textContent = '⏳ Envoi...';
+  btn.disabled = true;
+
+  try {
+    const payload = buildExportPayload();
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+    // Check if file exists to get SHA
+    let sha = null;
+    try {
+      const check = await fetch(API, {
+        headers: { Authorization: `token ${GH_TOKEN}`, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (check.ok) { const data = await check.json(); sha = data.sha; }
+      else if (check.status === 401) {
+        localStorage.removeItem('gh_token');
+        btn.textContent = '❌ Token expiré — réessaie';
+        btn.disabled = false; return;
+      }
+    } catch(e) {}
+
+    const body = {
+      message: `📊 Journal — ${new Date().toLocaleDateString('fr-FR')} — ${Object.keys(journal).length} entrées`,
+      content,
+      ...(sha ? { sha } : {})
+    };
+
+    const res = await fetch(API, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${GH_TOKEN}`,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (res.ok) {
+      btn.textContent = '✅ Sauvegardé !';
+      btn.style.borderColor = 'rgba(16,185,129,0.5)';
+      btn.style.color = '#10b981';
+      btn.style.background = 'rgba(16,185,129,0.15)';
+      setTimeout(() => {
+        btn.textContent = '☁️ SAUVEGARDER GITHUB';
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      if (res.status === 401) localStorage.removeItem('gh_token');
+      throw new Error(`HTTP ${res.status}`);
+    }
+  } catch(e) {
+    btn.textContent = '❌ Erreur — réessaie';
+    btn.style.borderColor = 'rgba(239,68,68,0.5)';
+    btn.style.color = '#ef4444';
+    btn.style.background = 'rgba(239,68,68,0.1)';
+    btn.disabled = false;
+    console.error('GitHub push error:', e);
+  }
 }
 
 function clearAll() {

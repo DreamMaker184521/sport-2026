@@ -1,6 +1,16 @@
 {
-  "exportDate": "2026-03-19T08:37:25.832Z",
+  "exportDate": "2026-03-19T08:38:43.518Z",
   "programme": "TOMY — 87→80kg — 16 mars → 1er juin 2026",
-  "totalEntries": 0,
-  "journal": {}
+  "totalEntries": 1,
+  "journal": {
+    "2026-03-16": {
+      "type": "PUSH",
+      "poids": "86",
+      "notes": "Test",
+      "sommeil": "8",
+      "feeling": 4,
+      "savedAt": "2026-03-19T08:38:14.753Z",
+      "dur": "60"
+    }
+  }
 }
